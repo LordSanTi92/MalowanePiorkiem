@@ -49,6 +49,8 @@ body {
       font-size: 25px;
       padding: 13px 20px 8px;
       margin: 0 3rem; }
+      #header .menu .menuList li:hover {
+        border-bottom: 4px solid #c19e7e; }
       #header .menu .menuList li a {
         text-decoration: none;
         color: #4a3821; }

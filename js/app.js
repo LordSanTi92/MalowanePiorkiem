@@ -15,7 +15,7 @@ $(function() {
           $(".menu").toggleClass("sticky",scrollTop > scrollingStartDistance);
 
 
-       if(scrollTop >= sectionAboutElemDistanceTop && scrollTop<=sectionAboutElemDistanceTop+640){
+       if(scrollTop >= sectionAboutElemDistanceTop-5 && scrollTop<=sectionAboutElemDistanceTop+640){
        $(".menu").find("li").first().css({
          borderBottom : "4px solid #c19e7e"
        })}
