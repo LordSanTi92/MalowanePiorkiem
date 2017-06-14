@@ -1,25 +1,40 @@
 $(function() {
-  let ulElem = $(".menu");
-  let ulPos = ulElem.position().top
-  let scrollingStartDistance = $(".menu").offset().top;
-  let sectionAboutElem = $("#about");
-  let sectionAboutElemPositionTop = parseInt(sectionAboutElem.position().top);
-  let sectionAboutElemDistanceTop = parseInt(sectionAboutElem.offset().top);
+      let menuElem = $(".menu");
+      let ulPos = menuElem.position().top
+       let sectionAboutElem = $("#about");
+       let sectionAboutElemPositionTop = parseInt(sectionAboutElem.position().top);
+       let sectionAboutElemDistanceTop = parseInt(sectionAboutElem.offset().top);
+       let scrollingStartDistance = $("#header").offset().top;
+
+   $(document).on("scroll resize",(function () {
+          let scrollingStartDistance = $("#header").offset().top;
+          let scrollTop = $(document).scrollTop();
+          console.log(scrollTop);
+          console.log(scrollingStartDistance);
+          $(".menu").slideDown();
+          $(".menu").toggleClass("sticky",scrollTop > scrollingStartDistance);
 
 
-   $(document).scroll(function () {
-       let scrollTop = $(document).scrollTop();
-       $(".menu").toggleClass("sticky", scrollTop > scrollingStartDistance);
-       if(scrollTop >= sectionAboutElemPositionTop-60 && scrollTop<=sectionAboutElemPositionTop+600){
-       $(".menu").find("li").first().css("border-bottom","2px solid red");
-     }
-     else if (scrollTop < sectionAboutElemPositionTop-60){
+       if(scrollTop >= sectionAboutElemDistanceTop && scrollTop<=sectionAboutElemDistanceTop+640){
+       $(".menu").find("li").first().css({
+         borderBottom : "4px solid #c19e7e"
+       })}
+    //  $(".menu").find("li").find("a").first().css("color","#4a3821")}
+     else if (scrollTop < sectionAboutElemDistanceTop){
        $(".menu").find("li").first().css("border-bottom","");
      }
-     else if(scrollTop >= sectionAboutElemPositionTop+540){
+     else if(scrollTop >= sectionAboutElemDistanceTop+640){
         $(".menu").find("li").first().css("border-bottom","");
      }
-   });
+
+}));
+$('a').click(function(){
+  $('html, body').animate({
+      scrollTop: $( $(this).attr('href') ).offset().top
+  }, 500);
+  return false;
+});
+
 
 
 
