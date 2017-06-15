@@ -1,7 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+  padding: 0; }
 
 body {
   background-color: white;
@@ -15,45 +14,43 @@ body {
 
 .parallax {
   background-image: url("../images/batch_main.jpg");
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover; }
+  background-size: cover;
+  overflow: hidden; }
 
 #header {
   width: 100%; }
-  #header .sticky {
+  #header .menu {
     position: fixed;
     z-index: 3;
     top: 0;
     left: 0;
     backface-visibility: hidden;
     width: 100%;
-    display: flex !important;
+    display: none;
     flex-wrap: nowrap;
     background-color: white;
-    justify-content: space-around; }
-  #header .menu {
-    height: 60px;
-    width: 100%;
-    display: none; }
-    #header .menu .menuList ul {
-      list-style: none;
-      margin-right: 10px;
-      text-align: center; }
-    #header .menu .menuList li {
-      font-weight: 100;
-      display: inline-block;
-      font-size: 25px;
-      padding: 13px 20px 8px;
-      margin: 0 3rem; }
-      #header .menu .menuList li:hover {
-        border-bottom: 4px solid #c19e7e; }
-      #header .menu .menuList li a {
-        text-decoration: none;
-        color: #4a3821; }
+    justify-content: space-around;
+    height: 60px; }
+  #header .menuList ul {
+    list-style: none;
+    margin-right: 10px;
+    text-align: center; }
+  #header .menuList li {
+    font-weight: 100;
+    display: inline-block;
+    font-size: 25px;
+    padding: 13px 20px 8px;
+    margin: 0 3rem; }
+    #header .menuList li:hover {
+      border-bottom: 4px solid #c19e7e; }
+    #header .menuList li a {
+      text-decoration: none;
+      color: #4a3821; }
 
 #about {
   position: relative;
@@ -77,14 +74,14 @@ body {
       border-radius: 50%;
       box-shadow: 0 6px 7px grey; }
     #about .info .aboutMe {
-      margin-top: 100px;
+      margin-top: 170px;
       width: 45%;
       height: 200px;
       position: relative;
       opacity: 0;
       text-align: justify; }
     #about .info .in-view {
-      animation: pokaz 2s forwards;
+      animation: pokaz 3s forwards;
       z-index: 1; }
     #about .info .in-view2 {
       animation: pokaz2 2s 1s forwards;
@@ -99,33 +96,115 @@ body {
 @keyframes pokaz2 {
   0% {
     opacity: 0;
-    right: -600px; }
+    right: -100px; }
   100% {
     opacity: 1;
     right: 0; } }
 
 .parallax2 {
-  background-image: url("../images/batch_main.jpg");
-  width: 100vw;
-  height: 100px;
+  background-image: url("../images/Image-09.jpg");
+  width: 100%;
+  height: 400px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.5; }
+
+#architecture {
+  height: 600px;
+  margin-top: -60px;
+  padding-top: 120px;
+  display: block; }
+  #architecture p {
+    font-size: 40px;
+    text-align: center; }
+  #architecture .flip-container {
+    margin: 0 auto;
+    perspective: 10000px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px; }
+    #architecture .flip-container:hover .flipper {
+      transform: rotateY(180deg); }
+    #architecture .flip-container .front, #architecture .flip-container .back {
+      width: 100%;
+      height: 500px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #architecture .flip-container .front {
+      background-image: url("../images/inner.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 2; }
+    #architecture .flip-container .back {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotateY(180deg); }
+      #architecture .flip-container .back p {
+        text-align: center;
+        font-size: 100px;
+        margin-top: 180px; }
+    #architecture .flip-container .flipper {
+      transition: 1.2s;
+      transform-style: preserve-3d;
+      position: relative; }
 
 .parallax3 {
-  background-image: url("../images/IMG_3039.jpeg");
-  width: 100vw;
-  height: 100vh;
+  background-image: url("../images/P1110034.jpg");
+  width: 100%;
+  height: 400px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: 0.5; }
 
-#buildings {
-  height: 1000px;
+#landscape {
+  height: 600px;
   margin-top: -60px;
-  padding-top: 60px;
+  padding-top: 120px;
   display: block; }
+  #landscape p {
+    font-size: 40px;
+    text-align: center; }
+  #landscape .flip-container {
+    margin: 0 auto;
+    perspective: 10000px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px; }
+    #landscape .flip-container:hover .flipper {
+      transform: rotateY(180deg); }
+    #landscape .flip-container .front, #landscape .flip-container .back {
+      width: 100%;
+      height: 500px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0; }
+    #landscape .flip-container .front {
+      background-image: url("../images/P1110049.jpg");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 2; }
+    #landscape .flip-container .back {
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      transform: rotateY(180deg); }
+      #landscape .flip-container .back p {
+        text-align: center;
+        font-size: 100px;
+        margin-top: 180px; }
+    #landscape .flip-container .flipper {
+      transition: 1.2s;
+      transform-style: preserve-3d;
+      position: relative; }

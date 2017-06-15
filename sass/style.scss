@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  // box-sizing: border-box;
 }
 
 body {
@@ -18,34 +18,31 @@ body {
 
 .parallax {
   background-image: url("../images/batch_main.jpg");
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  overflow: hidden;
 }
 
 #header {
   width: 100%;
 
-.sticky{
+.menu{
   position: fixed;
   z-index: 3;
   top: 0;
   left: 0;
   backface-visibility: hidden;
   width: 100%;
-  display: flex !important;
+  display: none;
   flex-wrap: nowrap;
   background-color: white;
   justify-content: space-around;
+  height: 60px;
 }
-
-  .menu {
-    height: 60px;
-    width: 100%;
-    display: none;
     .menuList {
       ul {
         list-style: none;
@@ -67,7 +64,6 @@ body {
           text-decoration: none;
           color: #4a3821;
 
-        }
       }
     }
   }
@@ -99,7 +95,7 @@ body {
     }
 
     .aboutMe {
-      margin-top: 100px;
+      margin-top: 170px;
       width: 45%;
       height: 200px;
       position: relative;
@@ -108,7 +104,7 @@ body {
     }
 
     .in-view {
-      animation: pokaz 2s forwards;
+      animation: pokaz 3s forwards;
       z-index: 1;
     }
 
@@ -130,7 +126,7 @@ body {
 @keyframes pokaz2 {
   0% {
     opacity: 0;
-    right: -600px;
+    right: -100px;
   }
 
   100% {
@@ -139,20 +135,20 @@ body {
   }
 }
 
+// .parallax2 {
+//   background-image: url("../images/batch_main.jpg");
+//   width: 100vw;
+//   height: 100px;
+//   background-attachment: fixed;
+//   background-position: center;
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   opacity: 0.5;
+// }
 .parallax2 {
-  background-image: url("../images/batch_main.jpg");
-  width: 100vw;
-  height: 100px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  opacity: 0.5;
-}
-.parallax3 {
-  background-image: url("../images/IMG_3039.jpeg");
-  width: 100vw;
-  height: 100vh;
+  background-image: url("../images/Image-09.jpg");
+  width: 100%;
+  height: 400px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -160,9 +156,124 @@ body {
   opacity: 0.5;
 }
 
-#buildings {
-  height: 1000px;
+#architecture {
+  height: 600px;
   margin-top: -60px;
-  padding-top:60px;
+  padding-top:120px;
   display: block;
+  p{
+    font-size: 40px;
+    text-align: center;
+  }
+  .flip-container{
+
+    margin: 0 auto;
+    perspective: 10000px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    &:hover .flipper{
+      transform: rotateY(180deg);
+    }
+    .front, .back{
+      width: 100%;
+      height: 500px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility:hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+      }
+      .front{
+        background-image: url("../images/inner.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2;
+        // opacity: 0.6;
+      }
+      .back{
+        // background-image: url("../images/P1010548.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotateY(180deg);
+        p{
+          text-align: center;
+          font-size: 100px;
+          margin-top:180px;
+        }
+      }
+    .flipper{
+      transition: 1.2s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+  }
+}
+.parallax3 {
+  background-image: url("../images/P1110034.jpg");
+  width: 100%;
+  height: 400px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.5;
+}
+
+#landscape {
+  height: 600px;
+  margin-top:-60px;
+  padding-top:120px;
+  display: block;
+  p{
+    font-size: 40px;
+    text-align: center;
+  }
+  .flip-container{
+
+    margin: 0 auto;
+    perspective: 10000px;
+    width: 100%;
+    max-width: 1100px;
+    height: 500px;
+    &:hover .flipper{
+      transform: rotateY(180deg);
+    }
+    .front, .back{
+      width: 100%;
+      height: 500px;
+      backface-visibility: hidden;
+      -webkit-backface-visibility:hidden;
+	    position: absolute;
+	    top: 0;
+	    left: 0;
+      }
+      .front{
+        background-image: url("../images/P1110049.jpg");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        z-index: 2;
+        // opacity: 0.6;
+      }
+      .back{
+        // background-image: url("../images/P1010548.jpg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        transform: rotateY(180deg);
+        p{
+          text-align: center;
+          font-size: 100px;
+          margin-top:180px;
+        }
+      }
+    .flipper{
+      transition: 1.2s;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+  }
 }

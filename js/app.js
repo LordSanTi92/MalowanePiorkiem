@@ -1,31 +1,52 @@
 $(function() {
-      let menuElem = $(".menu");
-      let ulPos = menuElem.position().top
-       let sectionAboutElem = $("#about");
-       let sectionAboutElemPositionTop = parseInt(sectionAboutElem.position().top);
-       let sectionAboutElemDistanceTop = parseInt(sectionAboutElem.offset().top);
-       let scrollingStartDistance = $("#header").offset().top;
 
    $(document).on("scroll resize",(function () {
+          let sectionAboutElem = $("#about");
+          let sectionAboutElemDistanceTop = parseInt(sectionAboutElem.offset().top);
+          let sectionArchitecture = $("#architecture");
+          let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
+          let sectionLandscape = $("#landscape");
+          let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
           let scrollingStartDistance = $("#header").offset().top;
           let scrollTop = $(document).scrollTop();
-          console.log(scrollTop);
-          console.log(scrollingStartDistance);
-          $(".menu").slideDown();
-          $(".menu").toggleClass("sticky",scrollTop > scrollingStartDistance);
+          if(scrollTop > scrollingStartDistance){
+          $(".menu").slideDown(1);
+          $(".menu").css("display","flex");
+        }
 
-
-       if(scrollTop >= sectionAboutElemDistanceTop-5 && scrollTop<=sectionAboutElemDistanceTop+640){
+//Border bottom for anchor About Me
+       if(scrollTop >= sectionAboutElemDistanceTop-1 && scrollTop<=sectionAboutElemDistanceTop+700){
        $(".menu").find("li").first().css({
          borderBottom : "4px solid #c19e7e"
        })}
-    //  $(".menu").find("li").find("a").first().css("color","#4a3821")}
      else if (scrollTop < sectionAboutElemDistanceTop){
        $(".menu").find("li").first().css("border-bottom","");
      }
-     else if(scrollTop >= sectionAboutElemDistanceTop+640){
+     else if(scrollTop >= sectionAboutElemDistanceTop+700){
         $(".menu").find("li").first().css("border-bottom","");
      }
+//Border bottom for anchor Architecture
+     if(scrollTop >= sectionArchitectureElemDistanceTop-1 && scrollTop<=sectionArchitectureElemDistanceTop+660){
+     $(".menu").find("li").eq(1).css({
+       borderBottom : "4px solid #c19e7e"
+     })}
+   else if (scrollTop < sectionArchitectureElemDistanceTop){
+     $(".menu").find("li").eq(1).css("border-bottom","");
+   }
+   else if(scrollTop >= sectionArchitectureElemDistanceTop+660){
+      $(".menu").find("li").eq(1).css("border-bottom","");
+   }
+   //Border bottom for anchor Landscape
+        if(scrollTop >= sectionLandscapeElemDistanceTop-1 && scrollTop<=sectionLandscapeElemDistanceTop+660){
+        $(".menu").find("li").eq(2).css({
+          borderBottom : "4px solid #c19e7e"
+        })}
+      else if (scrollTop < sectionLandscapeElemDistanceTop){
+        $(".menu").find("li").eq(2).css("border-bottom","");
+      }
+      else if(scrollTop >= sectionLandscapeElemDistanceTop+660){
+         $(".menu").find("li").eq(2).css("border-bottom","");
+      }
 
 }));
 $('a').click(function(){
