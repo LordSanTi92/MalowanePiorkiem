@@ -155,6 +155,15 @@ $(function() {
   })
 
     $('.architecturePics li:lt(9)').show();
+    $(window).on("load resize",function(){
+    if ($(window).outerWidth()<910) {
+        $('.architecturePics li:lt(9)').hide();
+        $('.architecturePics li:lt(4)').show();
+    }
+    else if ($(window).outerWidth()>910){
+          $('.architecturePics li:lt(9)').show();
+    }
+  })
     $('.less').hide();
     var items =  27;
     var shown =  9;
