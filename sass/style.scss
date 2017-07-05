@@ -26,6 +26,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   overflow: hidden;
 }
 
@@ -159,6 +162,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   opacity: 0.5;
 }
 
@@ -262,15 +268,15 @@ body {
         margin: 10px auto 0;
         width: 900px;
         height: 600px;
-          -webkit-transition: none;
-          -webkit-transform: none;
-          -ms-transition: none;
-          -ms-transform: none;
-          -moz-transition: none;
-          -moz-transform: none;
-          transition:none;
-          transform: none;
-          box-shadow: 0 0 10px grey;
+        -webkit-transition: none;
+        -webkit-transform: none;
+        -ms-transition: none;
+        -ms-transform: none;
+        -moz-transition: none;
+        -moz-transform: none;
+        transition: none;
+        transform: none;
+        box-shadow: 0 0 10px grey;
       }
     }
   }
@@ -358,6 +364,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   opacity: 0.5;
 }
 
@@ -467,7 +476,7 @@ body {
         -ms-transform: none;
         -moz-transition: none;
         -moz-transform: none;
-        transition:none;
+        transition: none;
         transform: none;
         box-shadow: 0 0 10px grey;
       }
@@ -720,10 +729,10 @@ body {
           -ms-transform: none;
           -moz-transition: none;
           -moz-transform: none;
-          transition:none;
+          transition: none;
           transform: none;
           box-shadow: 0 0 10px grey;
-          cursor:default;
+          cursor: default;
         }
       }
 
@@ -906,10 +915,10 @@ body {
           -ms-transform: none;
           -moz-transition: none;
           -moz-transform: none;
-          transition:none;
+          transition: none;
           transform: none;
           box-shadow: 0 0 10px grey;
-          cursor:default;
+          cursor: default;
         }
       }
     }
@@ -1048,10 +1057,10 @@ body {
           -ms-transform: none;
           -moz-transition: none;
           -moz-transform: none;
-          transition:none;
+          transition: none;
           transform: none;
           box-shadow: 0 0 10px grey;
-          cursor:default;
+          cursor: default;
         }
       }
     }
@@ -1223,7 +1232,7 @@ body {
         }
 
         img {
-          cursor:default;
+          cursor: default;
           position: relative;
           display: block;
           margin: 10px auto 0;
@@ -1235,7 +1244,7 @@ body {
           -ms-transform: none;
           -moz-transition: none;
           -moz-transform: none;
-          transition:none;
+          transition: none;
           transform: none;
           box-shadow: 0 0 10px grey;
         }

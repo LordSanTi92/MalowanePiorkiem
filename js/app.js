@@ -144,13 +144,13 @@ var checkWidth;
     $(window).on("load resize",function(){
     if($(window).outerWidth()>910){
       $('.architecturePics li:lt(9)').show();
-      $("#architecture").css("height","900px")
+
     }
     else
     {
       $('.architecturePics li:lt(9)').hide();
       $('.architecturePics li:lt(4)').show();
-      $("#architecture").css("height","700px")
+
     }
 
 
