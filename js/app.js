@@ -154,39 +154,37 @@ $(function() {
     })
   })
 
-  $('.architecturePics li:lt(9)').show();
-     $('.less').hide();
-     var items =  27;
-     var shown =  9;
-     $('.more').click(function () {
-         $('.less').show();
-         shown = $('.architecturePics li:visible').length+9;
-         if(shown< items) {$('.architecturePics li:lt('+shown+')').show(300);
-          let heightOfSection = $("#architecture").css("height");
-          heightOfSection= parseInt(heightOfSection)+700
-          $("#architecture").css("height",heightOfSection+"px")
-       }
-       else if(shown = items) {$('.architecturePics li:lt('+shown+')').show(300);
-        $('.more').hide();
-        let heightOfSection = $("#architecture").css("height");
-        heightOfSection= parseInt(heightOfSection)+700
-        $("#architecture").css("height",heightOfSection+"px")
-     }
-         else {$('.architecturePics li:lt('+items+')').show(300);
-              $('.more').hide();
-              let heightOfSection = $("#architecture").css("height");
-              heightOfSection= parseInt(heightOfSection)+300
-              $("#architecture").css("height",heightOfSection+"px")
-              }
-     });
-     $('.less').click(function () {
-         $('.architecturePics li').not(':lt(9)').hide(10);
+    $('.architecturePics li:lt(9)').show();
+    $('.less').hide();
+    var items =  27;
+    var shown =  9;
+    $('.more').click(function () {
+        $('.less').show();
+        shown = $('.architecturePics li:visible').length+9;
+        if(shown < items) {$('.architecturePics li:lt('+shown+')').show(300);
          let heightOfSection = $("#architecture").css("height");
-         heightOfSection = "900px";
-         $("#architecture").css("height",heightOfSection)
-         $('.more').show();
-         $('.less').hide();
-     });
+         heightOfSection= parseInt(heightOfSection)+650
+         $("#architecture").css("height",heightOfSection+"px")
+      }
+        else {$('.architecturePics li:lt('+items+')').show(300);
+             $('.more').hide();
+             let heightOfSection = $("#architecture").css("height");
+             heightOfSection= parseInt(heightOfSection)+650
+             $("#architecture").css("height",heightOfSection+"px")
+             }
+    });
+    $('.less').click(function () {
+        $('.architecturePics li').not(':lt(9)').hide(10);
+        let heightOfSection = $("#architecture").css("height");
+        heightOfSection = "900px";
+        $("#architecture").css("height",heightOfSection)
+        $('.more').show();
+        $('.less').hide();
+    });
+
+
+
+
 //landscape section
 
 let visibleImgLandscape = $(".landscapePics").find("img");
@@ -255,11 +253,11 @@ $.each(visibleImgLandscape, function() {
 })
 
      $('.landscapePics li:lt(9)').show();
-        $('.less').hide();
+        $('.less2').hide();
         var items =  27;
         var shown =  9;
-        $('.more').click(function () {
-            $('.less').show();
+        $('.more2').click(function () {
+            $('.less2').show();
             shown = $('.landscapePics li:visible').length+9;
             if(shown< items) {$('.landscapePics li:lt('+shown+')').show(300);
              let heightOfSection = $("#landscape").css("height");
@@ -267,25 +265,25 @@ $.each(visibleImgLandscape, function() {
              $("#landscape").css("height",heightOfSection+"px")
           }
           else if(shown = items) {$('.landscapePics li:lt('+shown+')').show(300);
-           $('.more').hide();
+           $('.more2').hide();
            let heightOfSection = $("#landscape").css("height");
            heightOfSection= parseInt(heightOfSection)+700
            $("#landscape").css("height",heightOfSection+"px")
         }
             else {$('.landscapePics li:lt('+items+')').show(300);
-                 $('.more').hide();
+                 $('.more2').hide();
                  let heightOfSection = $("#landscape").css("height");
                  heightOfSection= parseInt(heightOfSection)+300
                  $("#landscape").css("height",heightOfSection+"px")
                  }
         });
-        $('.less').click(function () {
+        $('.less2').click(function () {
             $('.architecturePics li').not(':lt(9)').hide(10);
             let heightOfSection = $("#architecture").css("height");
             heightOfSection = "900px";
             $("#architecture").css("height",heightOfSection)
-            $('.more').show();
-            $('.less').hide();
+            $('.more2').show();
+            $('.less2').hide();
         });
 
 

@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 11);
+/******/ 	return __webpack_require__(__webpack_require__.s = 2);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -71,7 +71,7 @@
 /***/ (function(module, exports, __webpack_require__) {
 
 
-__webpack_require__(4)
+__webpack_require__(6)
 
 
 
@@ -226,39 +226,37 @@ $(function() {
     })
   })
 
-  $('.architecturePics li:lt(9)').show();
-     $('.less').hide();
-     var items =  27;
-     var shown =  9;
-     $('.more').click(function () {
-         $('.less').show();
-         shown = $('.architecturePics li:visible').length+9;
-         if(shown< items) {$('.architecturePics li:lt('+shown+')').show(300);
-          let heightOfSection = $("#architecture").css("height");
-          heightOfSection= parseInt(heightOfSection)+700
-          $("#architecture").css("height",heightOfSection+"px")
-       }
-       else if(shown = items) {$('.architecturePics li:lt('+shown+')').show(300);
-        $('.more').hide();
-        let heightOfSection = $("#architecture").css("height");
-        heightOfSection= parseInt(heightOfSection)+700
-        $("#architecture").css("height",heightOfSection+"px")
-     }
-         else {$('.architecturePics li:lt('+items+')').show(300);
-              $('.more').hide();
-              let heightOfSection = $("#architecture").css("height");
-              heightOfSection= parseInt(heightOfSection)+300
-              $("#architecture").css("height",heightOfSection+"px")
-              }
-     });
-     $('.less').click(function () {
-         $('.architecturePics li').not(':lt(9)').hide(10);
+    $('.architecturePics li:lt(9)').show();
+    $('.less').hide();
+    var items =  27;
+    var shown =  9;
+    $('.more').click(function () {
+        $('.less').show();
+        shown = $('.architecturePics li:visible').length+9;
+        if(shown < items) {$('.architecturePics li:lt('+shown+')').show(300);
          let heightOfSection = $("#architecture").css("height");
-         heightOfSection = "900px";
-         $("#architecture").css("height",heightOfSection)
-         $('.more').show();
-         $('.less').hide();
-     });
+         heightOfSection= parseInt(heightOfSection)+650
+         $("#architecture").css("height",heightOfSection+"px")
+      }
+        else {$('.architecturePics li:lt('+items+')').show(300);
+             $('.more').hide();
+             let heightOfSection = $("#architecture").css("height");
+             heightOfSection= parseInt(heightOfSection)+650
+             $("#architecture").css("height",heightOfSection+"px")
+             }
+    });
+    $('.less').click(function () {
+        $('.architecturePics li').not(':lt(9)').hide(10);
+        let heightOfSection = $("#architecture").css("height");
+        heightOfSection = "900px";
+        $("#architecture").css("height",heightOfSection)
+        $('.more').show();
+        $('.less').hide();
+    });
+
+
+
+
 //landscape section
 
 let visibleImgLandscape = $(".landscapePics").find("img");
@@ -327,11 +325,11 @@ $.each(visibleImgLandscape, function() {
 })
 
      $('.landscapePics li:lt(9)').show();
-        $('.less').hide();
+        $('.less2').hide();
         var items =  27;
         var shown =  9;
-        $('.more').click(function () {
-            $('.less').show();
+        $('.more2').click(function () {
+            $('.less2').show();
             shown = $('.landscapePics li:visible').length+9;
             if(shown< items) {$('.landscapePics li:lt('+shown+')').show(300);
              let heightOfSection = $("#landscape").css("height");
@@ -339,25 +337,25 @@ $.each(visibleImgLandscape, function() {
              $("#landscape").css("height",heightOfSection+"px")
           }
           else if(shown = items) {$('.landscapePics li:lt('+shown+')').show(300);
-           $('.more').hide();
+           $('.more2').hide();
            let heightOfSection = $("#landscape").css("height");
            heightOfSection= parseInt(heightOfSection)+700
            $("#landscape").css("height",heightOfSection+"px")
         }
             else {$('.landscapePics li:lt('+items+')').show(300);
-                 $('.more').hide();
+                 $('.more2').hide();
                  let heightOfSection = $("#landscape").css("height");
                  heightOfSection= parseInt(heightOfSection)+300
                  $("#landscape").css("height",heightOfSection+"px")
                  }
         });
-        $('.less').click(function () {
+        $('.less2').click(function () {
             $('.architecturePics li').not(':lt(9)').hide(10);
             let heightOfSection = $("#architecture").css("height");
             heightOfSection = "900px";
             $("#architecture").css("height",heightOfSection)
-            $('.more').show();
-            $('.less').hide();
+            $('.more2').show();
+            $('.less2').hide();
         });
 
 
@@ -835,18 +833,32 @@ $.each(visibleImgLandscape, function() {
 /* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(3)(undefined);
+__webpack_require__(1);
+module.exports = __webpack_require__(0);
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "cf74e3fa0421c3f78c0428634ca4f94e.jpg";
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(5)(undefined);
 // imports
 
 
 // module
-exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nbody {\n  background-color: white;\n  font-family: 'Satisfy', cursive; }\n\n.container {\n  margin: 0 auto;\n  min-height: 1px;\n  max-width: 1100px;\n  width: 100%; }\n\n.parallax {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(12) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 100vh;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  overflow: hidden; }\n\n#header {\n  width: 100%; }\n  #header .menu {\n    position: fixed;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    backface-visibility: hidden;\n    width: 100%;\n    display: none;\n    flex-wrap: nowrap;\n    background-color: white;\n    justify-content: space-around;\n    height: 60px; }\n  #header .menuList ul {\n    list-style: none;\n    margin-right: 10px;\n    text-align: center; }\n  #header .menuList li {\n    font-weight: 100;\n    display: inline-block;\n    font-size: 25px;\n    padding: 13px 20px 8px;\n    margin: 0 3rem; }\n    #header .menuList li:hover {\n      border-bottom: 4px solid #c19e7e; }\n    #header .menuList li a {\n      text-decoration: none;\n      color: #4a3821; }\n\n#about {\n  position: relative;\n  height: 700px;\n  margin-top: -60px;\n  padding-top: 60px;\n  display: block; }\n  #about .info {\n    margin-top: 60px;\n    height: 500px;\n    display: flex;\n    justify-content: space-between; }\n    #about .info .img {\n      background-image: url(" + __webpack_require__(15) + ");\n      background-position: center;\n      background-size: cover;\n      height: 500px;\n      width: 45%;\n      opacity: 0;\n      position: relative;\n      border-radius: 50%;\n      box-shadow: 0 6px 7px grey; }\n    #about .info .aboutMe {\n      margin-top: 170px;\n      width: 45%;\n      height: 200px;\n      position: relative;\n      opacity: 0;\n      text-align: justify; }\n    #about .info .in-view {\n      animation: pokaz 3s forwards;\n      z-index: 1; }\n    #about .info .in-view2 {\n      animation: pokaz2 2s 1s forwards;\n      z-index: 1; }\n\n@keyframes pokaz {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes pokaz2 {\n  0% {\n    opacity: 0;\n    right: -100px; }\n  100% {\n    opacity: 1;\n    right: 0; } }\n\n.parallax2 {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(13) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 400px;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 0.5; }\n\n#architecture {\n  height: 900px; }\n  #architecture .architecturePics {\n    text-decoration: none;\n    padding-left: 30px; }\n    #architecture .architecturePics li {\n      float: left;\n      width: 31%;\n      height: 200px;\n      margin: 10px;\n      display: none;\n      list-style: none;\n      text-decoration: none; }\n    #architecture .architecturePics img {\n      width: 100%;\n      height: 200px; }\n    #architecture .architecturePics .big {\n      margin: 0 auto;\n      position: fixed;\n      margin-top: 60px;\n      max-width: 1920px;\n      width: 100%;\n      height: 100%;\n      left: 50%;\n      top: 0;\n      z-index: 2;\n      transform: translateX(-50%);\n      background: rgba(255, 255, 255, 0.9); }\n      #architecture .architecturePics .big .prev {\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        transform: translate(-514px, -50%);\n        left: 50%;\n        color: #c19e7e;\n        cursor: pointer;\n        width: 60px; }\n      #architecture .architecturePics .big .next {\n        width: 60px;\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        right: 50%;\n        transform: translate(527px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #architecture .architecturePics .big .cross {\n        width: 60px;\n        font-size: 55px;\n        z-index: 5;\n        position: absolute;\n        top: 37px;\n        right: 50%;\n        transform: translate(460px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #architecture .architecturePics .big img {\n        position: relative;\n        display: block;\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 900px;\n        height: 600px; }\n  #architecture .less,\n  #architecture .more {\n    cursor: pointer;\n    text-align: center;\n    font-size: 70px;\n    width: 50px;\n    color: #c19e7e; }\n  #architecture .less:after,\n  #architecture .more:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  #architecture .more {\n    float: left;\n    margin-left: 165px; }\n  #architecture .less {\n    float: right;\n    margin-right: 165px;\n    transform: rotate(180deg); }\n\n.parallax3 {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(14) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 400px;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 0.5; }\n\n#landscape {\n  height: 900px; }\n  #landscape .landscapePics {\n    text-decoration: none;\n    padding-left: 30px; }\n    #landscape .landscapePics li {\n      float: left;\n      width: 31%;\n      height: 200px;\n      margin: 10px;\n      display: none;\n      list-style: none;\n      text-decoration: none; }\n    #landscape .landscapePics img {\n      width: 100%;\n      height: 200px; }\n    #landscape .landscapePics .big {\n      margin: 0 auto;\n      position: fixed;\n      margin-top: 60px;\n      max-width: 1920px;\n      width: 100%;\n      height: 100%;\n      left: 50%;\n      top: 0;\n      z-index: 2;\n      transform: translateX(-50%);\n      background: rgba(255, 255, 255, 0.9); }\n      #landscape .landscapePics .big .prev {\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        transform: translate(-514px, -50%);\n        left: 50%;\n        color: #c19e7e;\n        cursor: pointer;\n        width: 60px; }\n      #landscape .landscapePics .big .next {\n        width: 60px;\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        right: 50%;\n        transform: translate(527px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #landscape .landscapePics .big .cross {\n        width: 60px;\n        font-size: 55px;\n        z-index: 5;\n        position: absolute;\n        top: 37px;\n        right: 50%;\n        transform: translate(460px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #landscape .landscapePics .big img {\n        position: relative;\n        display: block;\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 900px;\n        height: 600px; }\n  #landscape .less,\n  #landscape .more {\n    cursor: pointer;\n    text-align: center;\n    font-size: 70px;\n    width: 50px;\n    color: #c19e7e; }\n  #landscape .less:after,\n  #landscape .more:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  #landscape .more {\n    float: left;\n    margin-left: 165px; }\n  #landscape .less {\n    float: right;\n    margin-right: 165px;\n    transform: rotate(180deg); }\n", ""]);
+exports.push([module.i, "* {\n  margin: 0;\n  padding: 0;\n  box-sizing: border-box; }\n\nbody {\n  background-color: white;\n  font-family: 'Satisfy', cursive; }\n\n.container {\n  margin: 0 auto;\n  min-height: 1px;\n  max-width: 1100px;\n  width: 100%; }\n\n.parallax {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(9) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 100vh;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  overflow: hidden; }\n\n#header {\n  width: 100%; }\n  #header .menu {\n    position: fixed;\n    z-index: 2;\n    top: 0;\n    left: 0;\n    backface-visibility: hidden;\n    width: 100%;\n    display: none;\n    flex-wrap: nowrap;\n    background-color: white;\n    justify-content: space-around;\n    height: 60px; }\n  #header .menuList ul {\n    list-style: none;\n    margin-right: 10px;\n    text-align: center; }\n  #header .menuList li {\n    font-weight: 100;\n    display: inline-block;\n    font-size: 25px;\n    padding: 13px 20px 8px;\n    margin: 0 3rem; }\n    #header .menuList li:hover {\n      border-bottom: 4px solid #c19e7e; }\n    #header .menuList li a {\n      text-decoration: none;\n      color: #4a3821; }\n\n#about {\n  position: relative;\n  height: 700px;\n  margin-top: -60px;\n  padding-top: 60px;\n  display: block; }\n  #about .info {\n    margin-top: 60px;\n    height: 500px;\n    display: flex;\n    justify-content: space-between; }\n    #about .info .img {\n      background-image: url(" + __webpack_require__(3) + ");\n      background-position: center;\n      background-size: cover;\n      height: 500px;\n      width: 45%;\n      opacity: 0;\n      position: relative;\n      border-radius: 50%;\n      box-shadow: 0 6px 7px grey; }\n    #about .info .aboutMe {\n      margin-top: 170px;\n      width: 45%;\n      height: 200px;\n      position: relative;\n      opacity: 0;\n      text-align: justify;\n      margin-right: 50px; }\n    #about .info .in-view {\n      animation: pokaz 3s forwards;\n      z-index: 1; }\n    #about .info .in-view2 {\n      animation: pokaz2 2s 1s forwards;\n      z-index: 1; }\n\n@keyframes pokaz {\n  0% {\n    opacity: 0; }\n  100% {\n    opacity: 1; } }\n\n@keyframes pokaz2 {\n  0% {\n    opacity: 0;\n    right: -100px; }\n  100% {\n    opacity: 1;\n    right: 0; } }\n\n.parallax2 {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(10) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 400px;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 0.5; }\n\n#architecture {\n  height: 900px; }\n  #architecture .architecturePics {\n    text-decoration: none;\n    padding-left: 30px; }\n    #architecture .architecturePics li {\n      float: left;\n      width: 31%;\n      height: 200px;\n      margin: 10px;\n      display: none;\n      list-style: none;\n      text-decoration: none; }\n    #architecture .architecturePics img {\n      width: 100%;\n      height: 200px; }\n    #architecture .architecturePics .big {\n      margin: 0 auto;\n      position: fixed;\n      margin-top: 60px;\n      max-width: 1920px;\n      width: 100%;\n      height: 100%;\n      left: 50%;\n      top: 0;\n      z-index: 2;\n      transform: translateX(-50%);\n      background: rgba(255, 255, 255, 0.9); }\n      #architecture .architecturePics .big .prev {\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        transform: translate(-514px, -50%);\n        left: 50%;\n        color: #c19e7e;\n        cursor: pointer;\n        width: 60px; }\n      #architecture .architecturePics .big .next {\n        width: 60px;\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        right: 50%;\n        transform: translate(527px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #architecture .architecturePics .big .cross {\n        width: 60px;\n        font-size: 55px;\n        z-index: 5;\n        position: absolute;\n        top: 37px;\n        right: 50%;\n        transform: translate(460px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #architecture .architecturePics .big img {\n        position: relative;\n        display: block;\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 900px;\n        height: 600px; }\n  #architecture .less,\n  #architecture .more {\n    cursor: pointer;\n    color: #c19e7e; }\n  #architecture .less:after,\n  #architecture .more:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  #architecture .more {\n    animation: bumpDown 1.5s infinite;\n    float: left;\n    margin-left: 60px;\n    width: 0;\n    height: 0;\n    border-left: 145px solid transparent;\n    border-right: 145px solid transparent;\n    border-top: 27px solid #c19e7e; }\n    #architecture .more:hover {\n      border-top: 27px solid rgba(193, 158, 126, 0.8);\n      animation-play-state: paused; }\n    #architecture .more:active {\n      border-top: 27px solid rgba(193, 158, 126, 0.4); }\n\n@keyframes bumpDown {\n  0% {\n    transform: scale(1); }\n  100% {\n    transform: scale(1.1);\n    border-top: 27px solid #936b46; } }\n  #architecture .less {\n    animation: bumpUp 0.8s infinite;\n    float: right;\n    margin-right: 40px;\n    width: 0;\n    height: 0;\n    border-left: 165px solid transparent;\n    border-right: 165px solid transparent;\n    border-bottom: 27px solid #c19e7e; }\n    #architecture .less:hover {\n      border-top: 27px solid rgba(193, 158, 126, 0.8);\n      animation-play-state: paused; }\n    #architecture .less:active {\n      border-top: 27px solid rgba(193, 158, 126, 0.4); }\n\n@keyframes bumpUp {\n  0% {\n    transform: translateY(10px); }\n  100% {\n    transform: translateY(0px); } }\n\n.parallax3 {\n  margin: 0 auto;\n  background-image: url(" + __webpack_require__(11) + ");\n  max-width: 1920px;\n  width: 100%;\n  height: 400px;\n  background-attachment: fixed;\n  background-position: center;\n  background-repeat: no-repeat;\n  background-size: cover;\n  opacity: 0.5; }\n\n#landscape {\n  height: 900px; }\n  #landscape .landscapePics {\n    text-decoration: none;\n    padding-left: 30px; }\n    #landscape .landscapePics li {\n      float: left;\n      width: 31%;\n      height: 200px;\n      margin: 10px;\n      display: none;\n      list-style: none;\n      text-decoration: none; }\n    #landscape .landscapePics img {\n      width: 100%;\n      height: 200px; }\n    #landscape .landscapePics .big {\n      margin: 0 auto;\n      position: fixed;\n      margin-top: 60px;\n      max-width: 1920px;\n      width: 100%;\n      height: 100%;\n      left: 50%;\n      top: 0;\n      z-index: 2;\n      transform: translateX(-50%);\n      background: rgba(255, 255, 255, 0.9); }\n      #landscape .landscapePics .big .prev {\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        transform: translate(-514px, -50%);\n        left: 50%;\n        color: #c19e7e;\n        cursor: pointer;\n        width: 60px; }\n      #landscape .landscapePics .big .next {\n        width: 60px;\n        font-size: 134px;\n        z-index: 2;\n        position: absolute;\n        top: 310px;\n        right: 50%;\n        transform: translate(527px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #landscape .landscapePics .big .cross {\n        width: 60px;\n        font-size: 55px;\n        z-index: 5;\n        position: absolute;\n        top: 37px;\n        right: 50%;\n        transform: translate(460px, -50%);\n        color: #c19e7e;\n        cursor: pointer; }\n      #landscape .landscapePics .big img {\n        position: relative;\n        display: block;\n        margin: 0 auto;\n        margin-top: 10px;\n        width: 900px;\n        height: 600px; }\n  #landscape .less,\n  #landscape .more {\n    cursor: pointer;\n    text-align: center;\n    font-size: 70px;\n    width: 50px;\n    color: #c19e7e; }\n  #landscape .less:after,\n  #landscape .more:after {\n    clear: both;\n    content: \"\";\n    display: block; }\n  #landscape .more {\n    float: left;\n    margin-left: 165px; }\n  #landscape .less {\n    float: right;\n    margin-right: 165px;\n    transform: rotate(180deg); }\n\n@media only screen and (max-width: 950px) {\n  #header {\n    width: 100%; }\n    #header .menu {\n      position: fixed;\n      z-index: 2;\n      top: 0;\n      left: 0;\n      backface-visibility: hidden;\n      width: 100%;\n      display: none;\n      flex-wrap: nowrap;\n      background-color: white;\n      justify-content: space-around;\n      height: 60px; }\n    #header .menuList ul {\n      list-style: none;\n      margin-right: 10px;\n      text-align: center; }\n    #header .menuList li {\n      font-weight: 100;\n      display: inline-block;\n      font-size: 20px;\n      padding: 13px 20px 8px;\n      margin: 0 1rem; }\n      #header .menuList li:hover {\n        border-bottom: 4px solid #c19e7e; }\n      #header .menuList li a {\n        text-decoration: none;\n        color: #4a3821; } }\n\n@media only screen and (max-width: 800px) {\n  #about {\n    position: relative;\n    height: 1000px;\n    margin-top: -60px;\n    padding-top: 60px;\n    display: block; }\n    #about .info {\n      margin-top: 60px;\n      height: 500px;\n      display: flex;\n      justify-content: space-between;\n      flex-wrap: wrap; }\n      #about .info .img {\n        background-image: url(" + __webpack_require__(3) + ");\n        background-position: center;\n        background-size: cover;\n        height: 500px;\n        width: 50%;\n        opacity: 0;\n        position: relative;\n        border-radius: 50%;\n        box-shadow: 0 6px 7px grey;\n        margin: 0 auto; }\n      #about .info .aboutMe {\n        width: 90%;\n        height: 200px;\n        position: relative;\n        opacity: 0;\n        text-align: justify;\n        margin: 0 auto;\n        margin-top: 100px; }\n      #about .info .in-view {\n        animation: pokaz 3s forwards;\n        z-index: 1; }\n      #about .info .in-view2 {\n        animation: pokaz2 2s 1s forwards;\n        z-index: 1; }\n  @keyframes pokaz {\n    0% {\n      opacity: 0; }\n    100% {\n      opacity: 1; } }\n  @keyframes pokaz2 {\n    0% {\n      opacity: 0;\n      right: -100px; }\n    100% {\n      opacity: 1;\n      right: 0; } } }\n\n@media only screen and (max-width: 1060px) {\n  #architecture {\n    height: 900px; }\n    #architecture .architecturePics {\n      text-decoration: none;\n      padding-left: 30px; }\n      #architecture .architecturePics li {\n        float: left;\n        width: 31%;\n        height: 200px;\n        margin: 10px;\n        display: none;\n        list-style: none;\n        text-decoration: none; }\n      #architecture .architecturePics img {\n        width: 100%;\n        height: 200px; }\n      #architecture .architecturePics .big {\n        margin: 0 auto;\n        position: fixed;\n        margin-top: 60px;\n        max-width: 1920px;\n        width: 100%;\n        height: 100%;\n        left: 50%;\n        top: 0;\n        z-index: 2;\n        transform: translateX(-50%);\n        background: rgba(255, 255, 255, 0.9); }\n        #architecture .architecturePics .big .prev {\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 250px;\n          transform: translate(-435px, -50%);\n          left: 50%;\n          color: #c19e7e;\n          cursor: pointer;\n          width: 60px; }\n        #architecture .architecturePics .big .next {\n          width: 60px;\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 250px;\n          right: 50%;\n          transform: translate(447px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #architecture .architecturePics .big .cross {\n          width: 60px;\n          font-size: 55px;\n          z-index: 5;\n          position: absolute;\n          top: 37px;\n          right: 50%;\n          transform: translate(384px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #architecture .architecturePics .big img {\n          position: relative;\n          display: block;\n          margin: 0 auto;\n          margin-top: 10px;\n          width: 750px;\n          height: 500px; }\n      #architecture .architecturePics .less,\n      #architecture .architecturePics .more {\n        cursor: pointer;\n        color: #c19e7e; }\n      #architecture .architecturePics .less:after,\n      #architecture .architecturePics .more:after {\n        clear: both;\n        content: \"\";\n        display: block; }\n      #architecture .architecturePics .more {\n        animation: bumpDown 1.5s infinite;\n        float: left;\n        margin-left: 60px;\n        width: 0;\n        height: 0;\n        border-left: 145px solid transparent;\n        border-right: 145px solid transparent;\n        border-top: 27px solid #c19e7e; }\n        #architecture .architecturePics .more:hover {\n          border-top: 27px solid rgba(193, 158, 126, 0.8);\n          animation-play-state: paused; }\n        #architecture .architecturePics .more:active {\n          border-top: 27px solid rgba(193, 158, 126, 0.4); }\n  @keyframes bumpDown {\n    0% {\n      transform: scale(1); }\n    100% {\n      transform: scale(1.1);\n      border-top: 27px solid #936b46; } }\n      #architecture .architecturePics .less {\n        animation: bumpUp 0.8s infinite;\n        float: right;\n        margin-right: 40px;\n        width: 0;\n        height: 0;\n        border-left: 165px solid transparent;\n        border-right: 165px solid transparent;\n        border-bottom: 27px solid #c19e7e; }\n        #architecture .architecturePics .less:hover {\n          border-top: 27px solid rgba(193, 158, 126, 0.8);\n          animation-play-state: paused; }\n        #architecture .architecturePics .less:active {\n          border-top: 27px solid rgba(193, 158, 126, 0.4); }\n  @keyframes bumpUp {\n    0% {\n      transform: translateY(10px); }\n    100% {\n      transform: translateY(0px); } }\n  #landscape {\n    height: 900px; }\n    #landscape .landscapePics {\n      text-decoration: none;\n      padding-left: 30px; }\n      #landscape .landscapePics li {\n        float: left;\n        width: 31%;\n        height: 200px;\n        margin: 10px;\n        display: none;\n        list-style: none;\n        text-decoration: none; }\n      #landscape .landscapePics img {\n        width: 100%;\n        height: 200px; }\n      #landscape .landscapePics .big {\n        margin: 0 auto;\n        position: fixed;\n        margin-top: 60px;\n        max-width: 1920px;\n        width: 100%;\n        height: 100%;\n        left: 50%;\n        top: 0;\n        z-index: 2;\n        transform: translateX(-50%);\n        background: rgba(255, 255, 255, 0.9); }\n        #landscape .landscapePics .big .prev {\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 250px;\n          transform: translate(-435px, -50%);\n          left: 50%;\n          color: #c19e7e;\n          cursor: pointer;\n          width: 60px; }\n        #landscape .landscapePics .big .next {\n          width: 60px;\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 250px;\n          right: 50%;\n          transform: translate(447px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #landscape .landscapePics .big .cross {\n          width: 60px;\n          font-size: 55px;\n          z-index: 5;\n          position: absolute;\n          top: 37px;\n          right: 50%;\n          transform: translate(384px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #landscape .landscapePics .big img {\n          position: relative;\n          display: block;\n          margin: 0 auto;\n          margin-top: 10px;\n          width: 750px;\n          height: 500px; }\n    #landscape .less,\n    #landscape .more {\n      cursor: pointer;\n      text-align: center;\n      font-size: 70px;\n      width: 50px;\n      color: #c19e7e; }\n    #landscape .less:after,\n    #landscape .more:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n    #landscape .more {\n      float: left;\n      margin-left: 165px; }\n    #landscape .less {\n      float: right;\n      margin-right: 165px;\n      transform: rotate(180deg); } }\n\n@media only screen and (max-width: 910px) {\n  #architecture {\n    height: 700px !important; }\n    #architecture .architecturePics {\n      text-decoration: none;\n      padding-left: 30px; }\n      #architecture .architecturePics li {\n        float: left;\n        width: 45%;\n        height: 200px;\n        margin: 10px;\n        display: none;\n        list-style: none;\n        text-decoration: none; }\n      #architecture .architecturePics img {\n        width: 100%;\n        height: 200px; }\n      #architecture .architecturePics .big {\n        margin: 0 auto;\n        position: fixed;\n        margin-top: 60px;\n        max-width: 1920px;\n        width: 100%;\n        height: 100%;\n        left: 50%;\n        top: 0;\n        z-index: 2;\n        transform: translateX(-50%);\n        background: rgba(255, 255, 255, 0.9); }\n        #architecture .architecturePics .big .prev {\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 220px;\n          transform: translate(-365px, -50%);\n          left: 50%;\n          color: #c19e7e;\n          cursor: pointer;\n          width: 60px; }\n        #architecture .architecturePics .big .next {\n          width: 60px;\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 220px;\n          right: 50%;\n          transform: translate(375px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #architecture .architecturePics .big .cross {\n          width: 60px;\n          font-size: 55px;\n          z-index: 5;\n          position: absolute;\n          top: 37px;\n          right: 50%;\n          transform: translate(314px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #architecture .architecturePics .big img {\n          position: relative;\n          display: block;\n          margin: 0 auto;\n          margin-top: 10px;\n          width: 600px;\n          height: 400px; }\n    #architecture .less,\n    #architecture .more {\n      cursor: pointer;\n      color: #c19e7e; }\n    #architecture .less:after,\n    #architecture .more:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n    #architecture .more {\n      animation: bumpDown 1.5s infinite;\n      float: left;\n      margin-left: 23px;\n      width: 0;\n      height: 0;\n      border-left: 145px solid transparent;\n      border-right: 145px solid transparent;\n      border-top: 27px solid #c19e7e; }\n      #architecture .more:hover {\n        border-top: 27px solid rgba(193, 158, 126, 0.8);\n        animation-play-state: paused; }\n      #architecture .more:active {\n        border-top: 27px solid rgba(193, 158, 126, 0.4); }\n  @keyframes bumpDown {\n    0% {\n      transform: scale(1); }\n    100% {\n      transform: scale(1.1);\n      border-top: 27px solid #936b46; } }\n    #architecture .less {\n      animation: bumpUp 0.8s infinite;\n      float: right;\n      margin-right: 40px;\n      width: 0;\n      height: 0;\n      border-left: 165px solid transparent;\n      border-right: 165px solid transparent;\n      border-bottom: 27px solid #c19e7e; }\n      #architecture .less:hover {\n        border-top: 27px solid rgba(193, 158, 126, 0.8);\n        animation-play-state: paused; }\n      #architecture .less:active {\n        border-top: 27px solid rgba(193, 158, 126, 0.4); }\n  @keyframes bumpUp {\n    0% {\n      transform: translateY(10px); }\n    100% {\n      transform: translateY(0px); } }\n  #landscape {\n    height: 900px; }\n    #landscape .landscapePics {\n      text-decoration: none;\n      padding-left: 30px; }\n      #landscape .landscapePics li {\n        float: left;\n        width: 45%;\n        height: 200px;\n        margin: 10px;\n        display: none;\n        list-style: none;\n        text-decoration: none; }\n      #landscape .landscapePics img {\n        width: 100%;\n        height: 200px; }\n      #landscape .landscapePics .big {\n        margin: 0 auto;\n        position: fixed;\n        margin-top: 60px;\n        max-width: 1920px;\n        width: 100%;\n        height: 100%;\n        left: 50%;\n        top: 0;\n        z-index: 2;\n        transform: translateX(-50%);\n        background: rgba(255, 255, 255, 0.9); }\n        #landscape .landscapePics .big .prev {\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 220px;\n          transform: translate(-365px, -50%);\n          left: 50%;\n          color: #c19e7e;\n          cursor: pointer;\n          width: 60px; }\n        #landscape .landscapePics .big .next {\n          width: 60px;\n          font-size: 134px;\n          z-index: 2;\n          position: absolute;\n          top: 220px;\n          right: 50%;\n          transform: translate(375px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #landscape .landscapePics .big .cross {\n          width: 60px;\n          font-size: 55px;\n          z-index: 5;\n          position: absolute;\n          top: 37px;\n          right: 50%;\n          transform: translate(314px, -50%);\n          color: #c19e7e;\n          cursor: pointer; }\n        #landscape .landscapePics .big img {\n          position: relative;\n          display: block;\n          margin: 0 auto;\n          margin-top: 10px;\n          width: 600px;\n          height: 400px; }\n    #landscape .less2,\n    #landscape .more2 {\n      cursor: pointer;\n      text-align: center;\n      font-size: 70px;\n      width: 50px;\n      color: #c19e7e; }\n    #landscape .less2:after,\n    #landscape .more2:after {\n      clear: both;\n      content: \"\";\n      display: block; }\n    #landscape .more2 {\n      float: left;\n      margin-left: 165px; }\n    #landscape .less2 {\n      float: right;\n      margin-right: 165px;\n      transform: rotate(180deg); } }\n", ""]);
 
 // exports
 
 
 /***/ }),
-/* 3 */
+/* 5 */
 /***/ (function(module, exports) {
 
 /*
@@ -928,13 +940,13 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 4 */
+/* 6 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(2);
+var content = __webpack_require__(4);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -942,7 +954,7 @@ var transform;
 var options = {}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(5)(content, options);
+var update = __webpack_require__(7)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -959,7 +971,7 @@ if(false) {
 }
 
 /***/ }),
-/* 5 */
+/* 7 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -1005,7 +1017,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(6);
+var	fixUrls = __webpack_require__(8);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -1318,7 +1330,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 6 */
+/* 8 */
 /***/ (function(module, exports) {
 
 
@@ -1413,40 +1425,22 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 7 */,
-/* 8 */,
-/* 9 */,
-/* 10 */,
-/* 11 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(1);
-module.exports = __webpack_require__(0);
-
-
-/***/ }),
-/* 12 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "ef713637880166547703c24c129a203f.jpg";
 
 /***/ }),
-/* 13 */
+/* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "229d55414af4ca5166af3526550e92bf.jpg";
 
 /***/ }),
-/* 14 */
+/* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "41cc0f25bf5102108e058683ce9ee33f.jpg";
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "cf74e3fa0421c3f78c0428634ca4f94e.jpg";
 
 /***/ })
 /******/ ]);
