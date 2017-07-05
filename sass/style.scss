@@ -256,6 +256,7 @@ body {
       }
 
       img {
+        cursor: default;
         position: relative;
         display: block;
         margin: 10px auto 0;
@@ -378,6 +379,7 @@ body {
     }
 
     img {
+      cursor: pointer;
       width: 100%;
       height: 200px;
       -webkit-transition: all 200ms ease-in;
@@ -453,6 +455,7 @@ body {
       }
 
       img {
+        cursor: default;
         position: relative;
         display: block;
         margin: 10px auto 0;
@@ -630,6 +633,7 @@ body {
       }
 
       img {
+        cursor: pointer;
         width: 100%;
         height: 200px;
         -webkit-transition: all 200ms ease-in;
@@ -815,6 +819,7 @@ body {
       }
 
       img {
+        cursor: pointer;
         width: 100%;
         height: 200px;
         -webkit-transition: all 200ms ease-in;
@@ -939,7 +944,7 @@ body {
 }
 @media only screen and (max-width: 910px) {
   #architecture {
-    height: 700px !important;
+    height: 700px;
 
     .architecturePics {
       text-decoration: none;
@@ -956,6 +961,7 @@ body {
       }
 
       img {
+        cursor: pointer;
         width: 100%;
         height: 200px;
         -webkit-transition: all 200ms ease-in;
@@ -1141,6 +1147,7 @@ body {
       }
 
       img {
+        cursor: pointer;
         width: 100%;
         height: 200px;
         -webkit-transition: all 200ms ease-in;
@@ -1235,8 +1242,8 @@ body {
       }
     }
 
-    .less2,
-    .more2 {
+    .less,
+    .more {
       cursor: pointer;
       text-align: center;
       font-size: 70px;
@@ -1244,19 +1251,19 @@ body {
       color: #c19e7e;
     }
 
-    .less2:after,
-    .more2:after {
+    .less:after,
+    .more:after {
       clear: both;
       content: "";
       display: block;
     }
 
-    .more2 {
+    .more {
       float: left;
       margin-left: 165px;
     }
 
-    .less2 {
+    .less {
       float: right;
       margin-right: 165px;
       transform: rotate(180deg);
