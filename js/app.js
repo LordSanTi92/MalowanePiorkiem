@@ -2,7 +2,12 @@
 require("../sass/style.scss")
 
 
-
+var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+if (iOS){
+  $("parallax").css("background-attachment","scroll", "important")
+  $("parallax2").css("background-attachment","scroll", "important")
+  $("parallax3").css("background-attachment","scroll" ,"important")
+}
 
 $(function() {
   $(document).on("scroll resize", (function() {
@@ -144,59 +149,14 @@ var checkWidth;
     $(window).on("load resize",function(){
     if($(window).outerWidth()>910){
       $('.architecturePics li:lt(9)').show();
-
+      let heightOfElem = parseInt($("#architecture").css("height"));
     }
     else
     {
       $('.architecturePics li:lt(9)').hide();
       $('.architecturePics li:lt(4)').show();
-
+      let heightOfElem = parseInt($("#architecture").css("height"));
     }
-
-
-    // if ($(window).outerWidth()<910) {
-    //     $(".more").addClass('more2');
-    //     $(".less").addClass('less2');
-    //     $(".more").removeClass('more');
-    //     $(".less").removeClass('less');
-    //     $('.architecturePics li:lt(9)').hide();
-    //     $('.architecturePics li:lt(4)').show();
-    //     $('.less').hide();
-    //     let items2 =  27;
-    //     let shown2 =  4;
-    //     $('.more2').click(function () {
-    //         $('.less2').show();
-    //         shown2 = $('.architecturePics li:visible').length+4;
-    //         console.log(shown2);
-    //         if(shown2 < items2) {$('.architecturePics li:lt('+shown2+')').show(300);
-    //          let heightOfSection = $("#architecture").css("height");
-    //          heightOfSection= parseInt(heightOfSection)+650
-    //          $("#architecture").css("height",heightOfSection+"px")
-    //       }
-    //         else {$('.architecturePics li:lt('+items2+')').show(300);
-    //              $('.more2').hide();
-    //              let heightOfSection = $("#architecture").css("height");
-    //              heightOfSection= parseInt(heightOfSection)+650
-    //              $("#architecture").css("height",heightOfSection+"px")
-    //              }
-    //     });
-    //     $('.less2').click(function () {
-    //         $('.architecturePics li').not(':lt(9)').hide(10);
-    //         let heightOfSection = $("#architecture").css("height");
-    //         heightOfSection = "900px";
-    //         $("#architecture").css("height",heightOfSection)
-    //         $('.more2').show();
-    //         $('.less2').hide();
-    //     });
-    // }
-    // else if ($(window).outerWidth()>910){
-    //   $(".more2").addClass('more');
-    //   $(".less2").addClass('less');
-    //   $(".more2").removeClass('more2');
-    //   $(".less2").removeClass('less2');
-    //   $('.architecturePics li:lt(9)').show();
-    //   $('.less').hide();
-    // }
   })
   $('.architecturePics li:lt(4)').show();
   $('.less').hide();
@@ -253,38 +213,6 @@ var checkWidth;
   });
 
 
-//
-//   $('.architecturePics li:lt(9)').show();
-//   $('.less').hide();
-//   let items =  27;
-//   let shown =  9;
-//   $('.more').click(function () {
-//       $('.less').show();
-//       shown = $('.architecturePics li:visible').length+9;
-//       if(shown < items) {$('.architecturePics li:lt('+shown+')').show(300);
-//        let heightOfSection = $("#architecture").css("height");
-//        heightOfSection= parseInt(heightOfSection)+650
-//        $("#architecture").css("height",heightOfSection+"px")
-//     }
-//       else {$('.architecturePics li:lt('+items+')').show(300);
-//            $('.more').hide();
-//            let heightOfSection = $("#architecture").css("height");
-//            heightOfSection= parseInt(heightOfSection)+650
-//            $("#architecture").css("height",heightOfSection+"px")
-//            }
-//   });
-//   $('.less').click(function () {
-//       $('.architecturePics li').not(':lt(9)').hide(10);
-//       let heightOfSection = $("#architecture").css("height");
-//       heightOfSection = "900px";
-//       $("#architecture").css("height",heightOfSection)
-//       $('.more').show();
-//       $('.less').hide();
-//   });
-// }
-
-
-
 //landscape section
 
 let visibleImgLandscape = $(".landscapePics").find("img");
@@ -336,19 +264,6 @@ $.each(visibleImgLandscape, function() {
     crossElem.addEventListener("click", function() {
       landscapePics.removeChild(newDiv)
     })
-  //   if($(".big").length > 0){
-  //   $.each($(".menuList").find("a"),function(){
-  //     $(this).on("click",function(){
-  //       architecturePics.removeChild(newDiv)
-  //     })
-  //   })
-  // }
-  // else{
-  //   $.each($(".menuList").find("a"),function(){
-  //   $(this).removeAttr('onclick')
-  // })
-
-  // }
   })
 })
 
