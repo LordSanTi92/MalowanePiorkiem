@@ -45,6 +45,12 @@ $(function() {
     $(".parallax2").css("background-attachment","scroll", "important")
     $(".parallax3").css("background-attachment","scroll" ,"important")
   }
+  $(".fa-bars").on("click",function(){
+    $(this).toggleClass('fa-bars');
+    $(this).toggleClass('fa-times');
+    $(".burgerList").find("li").toggle(200);
+  })
+
   $(document).on("scroll resize", (function() {
     let sectionAboutElem = $("#about");
     let sectionAboutElemDistanceTop = parseInt(sectionAboutElem.offset().top);
@@ -52,6 +58,8 @@ $(function() {
     let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
     let sectionLandscape = $("#landscape");
     let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+    let sectionContact = $(".parallax4");
+    let sectionContactElemDistanceTop = parseInt(sectionContact.offset().top);
     let scrollingStartDistance = $("#header").offset().top;
     let scrollTop = $(document).scrollTop();
     if (scrollTop > scrollingStartDistance) {
@@ -76,19 +84,44 @@ $(function() {
       $(".menu").find("li").eq(1).css("border-bottom", "");
     }
     //Border bottom for anchor Landscape
-    if (scrollTop >= sectionLandscapeElemDistanceTop - 1 && scrollTop <= sectionLandscapeElemDistanceTop + parseInt($("#architecture").css("height"))) {
+    if (scrollTop >= sectionLandscapeElemDistanceTop - 1 && scrollTop <= sectionLandscapeElemDistanceTop + parseInt($("#landscape").css("height"))-61) {
       $(".menu").find("li").eq(2).css({borderBottom: "4px solid #c19e7e"})
     } else if (scrollTop < sectionLandscapeElemDistanceTop) {
       $(".menu").find("li").eq(2).css("border-bottom", "");
     } else if (scrollTop >= sectionLandscapeElemDistanceTop + 660) {
       $(".menu").find("li").eq(2).css("border-bottom", "");
     }
-
+    //Border bottom for anchor contact
+    if (scrollTop >= sectionContactElemDistanceTop - 60 ){
+      console.log("jestem");
+      $(".menu").find("li").eq(3).css({borderBottom: "4px solid #c19e7e"})
+    } else if (scrollTop < sectionContactElemDistanceTop) {
+      $(".menu").find("li").eq(3).css("border-bottom", "");
+    }
   }));
+
+  $(window).on("load resize",function(){
+    console.log($(window).outerWidth());
+    if($(window).outerWidth()>650){
+        $(".burgerList").addClass('menuList');
+        $(".burgerList").removeClass('burgerList')
+    }
+    else if($(window).outerWidth()<650){
+        $(".menuList").addClass('burgerList');
+        $(".menuList").removeClass('menuList')
+    }
+
+  })
+
   $('a').click(function() {
     $('html, body').animate({
       scrollTop: $($(this).attr('href')).offset().top
     }, 500);
+    if($(".fa-times").css("display")=="block"){
+      $(".burgerList").find("li").hide(200);
+      $(".menu").find("i").toggleClass('fa-bars');
+      $(".menu").find("i").toggleClass('fa-times');
+    }
     return false;
   });
 
@@ -180,7 +213,7 @@ $(function() {
       })
     })
   })
-var checkWidth;
+
     $(window).on("load resize",function(){
     if($(window).outerWidth()>910){
       $('.architecturePics li:lt(9)').show();
@@ -236,6 +269,11 @@ var checkWidth;
       $("#architecture").css("height",heightOfSection)
       $('.more').show();
       $('.less').hide();
+      let sectionArchitecture = $("#architecture");
+      let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
+      $('html, body').animate({
+        scrollTop: sectionArchitectureElemDistanceTop
+      }, 500);
     }
     else {
       $('.architecturePics li').not(':lt(9)').hide(10);
@@ -244,6 +282,11 @@ var checkWidth;
       $("#architecture").css("height",heightOfSection)
       $('.more').show();
       $('.less').hide();
+      let sectionArchitecture = $("#architecture");
+      let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
+      $('html, body').animate({
+        scrollTop: sectionArchitectureElemDistanceTop
+      }, 500);
     }
   });
 
