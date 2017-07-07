@@ -44,6 +44,7 @@ $(function() {
     $(".parallax").css("background-attachment","scroll", "important")
     $(".parallax2").css("background-attachment","scroll", "important")
     $(".parallax3").css("background-attachment","scroll" ,"important")
+    $(".parallax4").css("background-attachment","scroll" ,"important")
   }
   $(".fa-bars").on("click",function(){
     $(this).toggleClass('fa-bars');

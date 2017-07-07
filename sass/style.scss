@@ -1,6 +1,6 @@
 * {
-  margin: 0;
-  padding: 0;
+  margin: 0px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -18,7 +18,7 @@ body {
 
 .parallax {
   margin: 0 auto;
-  background-image: url("../images/baner.jpg");
+  background-image: url("../images/banner_big.jpg");
   max-width: 1920px;
   width: 100%;
   height: 100vh;
@@ -895,71 +895,51 @@ footer{
       .more {
         cursor: pointer;
         color: #c19e7e;
+        font-size: 145px;
+        position: relative;
       }
-
-      .less:after,
-      .more:after {
-        clear: both;
-        content: "";
-        display: block;
-      }
-
-      .more {
-        animation: bumpDown 1.5s infinite;
-        float: left;
-        margin-left: 60px;
-        width: 0;
-        height: 0;
-        border-left: 145px solid transparent;
-        border-right: 145px solid transparent;
-        border-top: 27px solid #c19e7e;
-
-        &:hover {
-          border-top: 27px solid rgba(193, 158, 126,0.8);
-          animation-play-state: paused;
-        }
-
-        &:active {
-          border-top: 27px solid rgba(193, 158, 126,0.4);
+      .more{
+        bottom: 48px;
+        left:15%;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+        &:hover{
+          -webkit-transition: all 200ms ease-in;
+          -webkit-transform: scale(1.2);
+          -ms-transition: all 200ms ease-in;
+          -ms-transform: scale(1.2);
+          -moz-transition: all 200ms ease-in;
+          -moz-transform: scale(1.2);
+          transition: all 200ms ease-in;
+          transform: scale(1.2);
         }
       }
-      @keyframes bumpDown {
-        0% {
-          transform: scale(1);
-        }
-
-        100% {
-          transform: scale(1.1);
-          border-top: 27px solid #936b46;
-        }
-      }
-
-      .less {
-        animation: bumpUp 0.8s infinite;
-        float: right;
-        margin-right: 40px;
-        width: 0;
-        height: 0;
-        border-left: 165px solid transparent;
-        border-right: 165px solid transparent;
-        border-bottom: 27px solid #c19e7e;
-
-        &:hover {
-          border-top: 27px solid rgba(193, 158, 126,0.8);
-          animation-play-state: paused;
-        }
-
-        &:active {
-          border-top: 27px solid rgba(193, 158, 126,0.4);
-        }
-      }
-      @keyframes bumpUp {
-        0% {
-          transform: translateY(10px);
-        }
-
-        100% {
-          transform: translateY(0px);
+      .less{
+        bottom: 48px;
+        left:71%;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+        transition: all 200ms ease-in;
+        transform: scale(1);
+        &:hover{
+          -webkit-transition: all 200ms ease-in;
+          -webkit-transform: scale(1.2);
+          -ms-transition: all 200ms ease-in;
+          -ms-transform: scale(1.2);
+          -moz-transition: all 200ms ease-in;
+          -moz-transform: scale(1.2);
+          transition: all 200ms ease-in;
+          transform: scale(1.2);
         }
       }
     }
@@ -1077,84 +1057,9 @@ footer{
         }
       }
     }
-
-    .less,
-    .more {
-      cursor: pointer;
-      text-align: center;
-      font-size: 70px;
-      width: 50px;
-      color: #c19e7e;
-    }
-
-    .less:after,
-    .more:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-
-    .more {
-      float: left;
-      margin-left: 165px;
-    }
-
-    .less {
-      float: right;
-      margin-right: 165px;
-      transform: rotate(180deg);
-    }
   }
 }
 @media only screen and (max-width: 910px) {
-  .parallax {
-    margin: 0 auto;
-    background-image: url("../images/baner.jpg");
-    max-width: 910px;
-    width: 100%;
-    height: 100vh;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    overflow: hidden;
-  }
-
-  .parallax2 {
-    margin: 0 auto;
-    background-image: url("../images/parallax1.jpg");
-    max-width: 910px;
-    width: 100%;
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    opacity: 0.5;
-  }
-
-  .parallax3 {
-    margin: 0 auto;
-    background-image: url("../images/parallax2.jpg");
-    max-width: 910px;
-    width: 100%;
-    height: 400px;
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    opacity: 0.5;
-  }
-
   #architecture {
     height: 700px;
 
@@ -1267,78 +1172,58 @@ footer{
         }
       }
     }
-
     .less,
     .more {
       cursor: pointer;
       color: #c19e7e;
+      font-size: 145px;
+      position: relative;
     }
-
-    .less:after,
-    .more:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-
-    .more {
-      animation: bumpDown 1.5s infinite;
-      float: left;
-      margin-left: 23px;
-      width: 0;
-      height: 0;
-      border-left: 145px solid transparent;
-      border-right: 145px solid transparent;
-      border-top: 27px solid #c19e7e;
-
-      &:hover {
-        border-top: 27px solid rgba(193, 158, 126,0.8);
-        animation-play-state: paused;
-      }
-
-      &:active {
-        border-top: 27px solid rgba(193, 158, 126,0.4);
+    .more{
+      bottom: 48px;
+      left:21%;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+      &:hover{
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.2);
+        transition: all 200ms ease-in;
+        transform: scale(1.2);
       }
     }
-    @keyframes bumpDown {
-      0% {
-        transform: scale(1);
-      }
-
-      100% {
-        transform: scale(1.1);
-        border-top: 27px solid #936b46;
-      }
-    }
-
-    .less {
-      animation: bumpUp 0.8s infinite;
-      float: right;
-      margin-right: 40px;
-      width: 0;
-      height: 0;
-      border-left: 165px solid transparent;
-      border-right: 165px solid transparent;
-      border-bottom: 27px solid #c19e7e;
-
-      &:hover {
-        border-top: 27px solid rgba(193, 158, 126,0.8);
-        animation-play-state: paused;
-      }
-
-      &:active {
-        border-top: 27px solid rgba(193, 158, 126,0.4);
+    .less{
+      bottom: 48px;
+      left:54%;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+      transition: all 200ms ease-in;
+      transform: scale(1);
+      &:hover{
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.2);
+        transition: all 200ms ease-in;
+        transform: scale(1.2);
       }
     }
-    @keyframes bumpUp {
-      0% {
-        transform: translateY(10px);
-      }
 
-      100% {
-        transform: translateY(0px);
-      }
-    }
   }
 
   #landscape {
@@ -1453,38 +1338,11 @@ footer{
         }
       }
     }
-
-    .less,
-    .more {
-      cursor: pointer;
-      text-align: center;
-      font-size: 70px;
-      width: 50px;
-      color: #c19e7e;
-    }
-
-    .less:after,
-    .more:after {
-      clear: both;
-      content: "";
-      display: block;
-    }
-
-    .more {
-      float: left;
-      margin-left: 165px;
-    }
-
-    .less {
-      float: right;
-      margin-right: 165px;
-      transform: rotate(180deg);
-    }
   }
   @media only screen and (max-width: 700px) {
     .parallax {
       margin: 0 auto;
-      background-image: url("../images/baner.jpg");
+      background-image: url("../images/banner_small.jpg");
       max-width: 700px;
       width: 100%;
       background-attachment: fixed;
@@ -1528,5 +1386,21 @@ footer{
       -o-background-size: cover;
       opacity: 0.5;
     }
+  }
+}
+@media only screen and (max-width: 500px){
+  .parallax {
+    margin: 0 auto;
+    background-image: url("../images/banner_big.jpg");
+    max-width: 500px;
+    width: 100%;
+    height: 300px;
+    background-attachment: fixed;
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: contain;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    -o-background-size: contain;
   }
 }
