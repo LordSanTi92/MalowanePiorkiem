@@ -94,7 +94,6 @@ $(function() {
     }
     //Border bottom for anchor contact
     if (scrollTop >= sectionContactElemDistanceTop - 60 ){
-      console.log("jestem");
       $(".menu").find("li").eq(3).css({borderBottom: "4px solid #c19e7e"})
     } else if (scrollTop < sectionContactElemDistanceTop) {
       $(".menu").find("li").eq(3).css("border-bottom", "");
@@ -102,7 +101,7 @@ $(function() {
   }));
 
   $(window).on("load resize",function(){
-    console.log($(window).outerWidth());
+    console.log($(window).innerWidth());
     if($(window).outerWidth()>650){
         $(".burgerList").addClass('menuList');
         $(".burgerList").removeClass('burgerList')
