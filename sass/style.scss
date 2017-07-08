@@ -1497,7 +1497,6 @@ footer{
         width: 85%;
         height: 200px;
         margin: 10px;
-        margin-left: 30px;
         display: none;
         list-style: none;
         text-decoration: none;
@@ -1669,15 +1668,14 @@ footer{
   }
 
   #landscape {
-    height: 850px;
-
+    height: 2200px;
     .landscapePics {
       text-decoration: none;
       padding-left: 30px;
 
       li {
         float: left;
-        width: 31%;
+        width: 85%;
         height: 200px;
         margin: 10px;
         display: none;
@@ -1716,7 +1714,7 @@ footer{
         margin: 0 auto;
         position: fixed;
         margin-top: 60px;
-        max-width: 1920px;
+        max-width: 500px;
         width: 100%;
         height: 100%;
         left: 50%;
@@ -1726,11 +1724,11 @@ footer{
         background: rgba(255,255,255,0.9);
 
         .prev {
-          font-size: 134px;
+          font-size: 92px;
           z-index: 2;
           position: absolute;
-          top: 310px;
-          transform: translate(-514px,-50%);
+          top: 150px;
+          transform: translate(-360%,-50%);
           left: 50%;
           color: #c19e7e;
           cursor: pointer;
@@ -1739,12 +1737,12 @@ footer{
 
         .next {
           width: 60px;
-          font-size: 134px;
+          font-size: 92px;
           z-index: 2;
           position: absolute;
-          top: 310px;
+          top: 150px;
           right: 50%;
-          transform: translate(527px,-50%);
+          transform: translate(400%,-50%);
           color: #c19e7e;
           cursor: pointer;
         }
@@ -1756,7 +1754,7 @@ footer{
           position: absolute;
           top: 37px;
           right: 50%;
-          transform: translate(460px, -50%);
+          transform: translate(320%, -50%);
           color: #c19e7e;
           cursor: pointer;
         }
@@ -1765,9 +1763,9 @@ footer{
           cursor: default;
           position: relative;
           display: block;
-          margin: 10px auto 0;
-          width: 900px;
-          height: 600px;
+          margin: 10px auto ;
+          width: 80%;
+          height: 300px;
           -webkit-transition: none;
           -webkit-transform: none;
           -ms-transition: none;
@@ -1828,39 +1826,40 @@ footer{
     height: 150px;
     margin-top: 80px;
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-around;
     .phone{
-      width: 31%;
+      width: 80%;
       height: 80px;
       display: flex;
       justify-content: space-around;
       .fa{
-        font-size: 50px;
+        font-size: 40px;
         width: 10%;
         color:#c19e7e;
         border: none;
       }
       p{
         margin-top: 7px;
-        font-size: 25px;
+        font-size: 20px;
         width: 70%;
          color: #c19e7e;
       }
     }
     .mail{
-      width: 31%;
+      width: 80%;
       height: 80px;
       display: flex;
       justify-content: space-around;
       .fa{
-        font-size: 50px;
+        font-size: 40px;
         width: 10%;
         color:#c19e7e;
         border: none;
       }
       a{
         margin-top: 7px;
-        font-size: 25px;
+        font-size: 20px;
         width: 70%;
          color: #c19e7e;
          text-decoration: none;
