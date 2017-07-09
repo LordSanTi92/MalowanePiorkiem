@@ -45,7 +45,9 @@ $(function() {
     $(".parallax2").css("background-attachment","scroll", "important")
     $(".parallax3").css("background-attachment","scroll" ,"important")
     $(".parallax4").css("background-attachment","scroll" ,"important")
+  }
 
+  if (/Mobi/.test(navigator.userAgent)) {
     let visibleImgArchitecture = $(".architecturePics").find("img");
     $.each(visibleImgArchitecture, function() {
       $(this).on("click", event => {
@@ -87,8 +89,7 @@ $(function() {
         })
       })
     })
-  }
-
+}
 
   $(".fa-bars").on("click",function(){
     $(this).toggleClass('fa-bars');
@@ -208,49 +209,9 @@ $(function() {
   //Pop up gallery architecture
   // $(window).on("load resize", function(){
   //   if($(window).outerWidth()<800){
-  //     let visibleImgArchitecture = $(".architecturePics").find("img");
-  //     $.each(visibleImgArchitecture, function() {
-  //       $(this).on("click", event => {
-  //         let currentImg = $(event.target);
-  //         let architecturePics = document.querySelector(".architecturePics");
-  //         let srcImg = $(event.target).attr("src");
-  //         let newDiv = document.createElement("div");
-  //         let crossElem = document.createElement("span");
-  //         newDiv.classList.add("big");
-  //         crossElem.classList.add("cross");
-  //         crossElem.classList.add("fa");
-  //         crossElem.classList.add("fa-times");
-  //         let newImg = document.createElement("img");
-  //         newImg.setAttribute("src", srcImg);
-  //         newDiv.appendChild(newImg);
-  //         newDiv.appendChild(crossElem);
-  //         architecturePics.appendChild(newDiv);
-  //         $(".big").find("img").swipeleft(() => {
-  //           if (currentImg.parent().next().children().attr("src") == null) {
-  //             architecturePics.removeChild(newDiv)
-  //           } else {
-  //             currentImg = currentImg.parent().next().children();
-  //             srcImg = currentImg.attr("src");
-  //             newImg.setAttribute("src", srcImg);
-  //           }
-  //         })
-  //         $(".big").find("img").swiperight(() => {
-  //
-  //           if (currentImg.parent().prev().children().attr("src") == null) {
-  //             architecturePics.removeChild(newDiv)
-  //           } else {
-  //             currentImg = currentImg.parent().prev().children();
-  //             srcImg = currentImg.attr("src");
-  //             newImg.setAttribute("src", srcImg);
-  //           }
-  //         })
-  //         crossElem.addEventListener("click", function() {
-  //           architecturePics.removeChild(newDiv)
-  //         })
-  //       })
-  //     })
-  //   }
-  //   else{
+
+    // }
+    // else{
   let visibleImgArchitecture = $(".architecturePics").find("img");
   $.each(visibleImgArchitecture, function() {
     $(this).on("click", event => {
