@@ -63,7 +63,7 @@ $(function() {
         newDiv.appendChild(newImg);
         newDiv.appendChild(crossElem);
         architecturePics.appendChild(newDiv);
-        newImg.on("swipeleft", () => {
+        $("big").find(img).on("swipeleft", () => {
           if (currentImg.parent().next().children().attr("src") == null) {
             architecturePics.removeChild(newDiv)
           } else {
@@ -72,7 +72,7 @@ $(function() {
             newImg.setAttribute("src", srcImg);
           }
         })
-        newImg.on("swiperight", () => {
+        $("big").find(img).on("swiperight", () => {
 
           if (currentImg.parent().prev().children().attr("src") == null) {
             architecturePics.removeChild(newDiv)
