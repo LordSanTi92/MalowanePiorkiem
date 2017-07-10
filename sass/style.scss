@@ -25,6 +25,7 @@ body {
     border-radius: 50%;
     border: 5px solid transparent;
     border-top: 5px solid #4a3821;
+    border-bottom: 5px solid #4a3821;
     animation: spin 4s infinite;
     .innerCircle{
       position: absolute;
@@ -36,6 +37,7 @@ body {
       border-radius: 50%;
       border: 5px solid transparent;
       border-top: 5px solid #c19e7e;
+      border-bottom: 5px solid #c19e7e;
       animation: spin2 2s infinite;
     }
   }
