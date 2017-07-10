@@ -95,7 +95,9 @@ body {
     left: 0;
     backface-visibility: hidden;
     width: 100%;
-    display: none;
+    display: -webkit-flex; /* Safari */
+    -webkit-flex-wrap: nowrap !important;; /* Safari 6.1+ */
+    display: flex;
     flex-wrap: nowrap !important;
     background-color: white;
     justify-content: space-around;
@@ -654,9 +656,11 @@ footer{
       left: 0;
       backface-visibility: hidden;
       width: 100%;
-      display: none;
-      flex-wrap: nowrap !important;
       background-color: white;
+      display: -webkit-flex; /* Safari */
+      -webkit-flex-wrap: nowrap !important;; /* Safari 6.1+ */
+      display: flex;
+      flex-wrap: nowrap !important;
       justify-content: space-around;
       height: 50px;
     }
@@ -747,6 +751,7 @@ footer{
       left: 0;
       backface-visibility: hidden;
       width: 100%;
+  -webkit-flex-wrap: wrap !important; /* Safari 6.1+ */
       display: none;
       flex-wrap: nowrap !important;
       background-color: white;
@@ -783,6 +788,7 @@ footer{
         position: relative;
         margin-right: 0px;
         top:30px;
+        width: 100%
       }
 
       li {
