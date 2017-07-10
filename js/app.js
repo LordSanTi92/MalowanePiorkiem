@@ -136,8 +136,8 @@ $(function() {
         newDiv.classList.add("big");
         prevSpan.classList.add("prev");
         nextSpan.classList.add("next");
-        prevSpan.classList.add("fa-caret-left");
-        nextSpan.classList.add("fa-caret-right");
+        prevSpan.classList.add("fa-angle-left");
+        nextSpan.classList.add("fa-angle-right");
         prevSpan.classList.add("fa");
         nextSpan.classList.add("fa");
         crossElem.classList.add("cross");
@@ -187,7 +187,7 @@ $(function() {
         $('.less').hide();
         let sectionArchitecture = $("#architecture");
         let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
-      } else {
+      } else if ($(window).outerWidth() <= 910){
         $('.architecturePics li').hide();
         $('.architecturePics li:lt(4)').show();
         let heightOfSection = $("#architecture").css("height");
@@ -201,8 +201,13 @@ $(function() {
     })
     $('.architecturePics li:lt(4)').show();
     $('.less').hide();
-    let items2 = 27;
+    let items2 = 30;
+    if ($(window).outerWidth() <= 910) {
     let shown2 = 4;
+  }
+  else{
+    let shown2 = 9;
+  }
     $('.more').click(function() {
       $('.less').attr("style", "display:inline-block");
       shown2 = $('.architecturePics li:visible').length + 6;
@@ -215,7 +220,7 @@ $(function() {
           $("#architecture").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
         } else if ($(window).outerWidth() <= 910) {
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 650
+          heightOfSection = parseInt(heightOfSection) + 660
           $("#architecture").css("height", heightOfSection + "px", "important")
         } else {
           let heightOfSection = $("#architecture").css("height");
@@ -228,17 +233,17 @@ $(function() {
         if ($(window).outerWidth() < 501) {
           $('.more').hide();
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 1050
+          heightOfSection = parseInt(heightOfSection) + 350
           $("#architecture").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
-        } else if ($(window).outerWidth() < 910) {
+        } else if ($(window).outerWidth() <= 910) {
           $('.more').hide();
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 650
+          heightOfSection = parseInt(heightOfSection) + 280
           $("#architecture").css("height", heightOfSection + "px", "important")
         } else {
           $('.more').hide();
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 450
+          heightOfSection = parseInt(heightOfSection) + 250
           $("#architecture").css("height", heightOfSection + "px", "important")
         }
       }
@@ -257,7 +262,7 @@ $(function() {
         $('html, body').animate({
           scrollTop: sectionArchitectureElemDistanceTop
         }, 500);
-      } else if ($(window).outerWidth() < 910) {
+      } else if ($(window).outerWidth() <= 910) {
         $('.architecturePics li').not(':lt(4)').hide(10);
         let heightOfSection = $("#architecture").css("height");
         heightOfSection = "700px";
@@ -299,8 +304,8 @@ $(function() {
         newDiv.classList.add("big");
         prevSpan.classList.add("prev");
         nextSpan.classList.add("next");
-        prevSpan.classList.add("fa-caret-left");
-        nextSpan.classList.add("fa-caret-right");
+        prevSpan.classList.add("fa-angle-left");
+        nextSpan.classList.add("fa-angle-right");
         prevSpan.classList.add("fa");
         nextSpan.classList.add("fa");
         crossElem.classList.add("cross");
@@ -589,7 +594,7 @@ $(function() {
         $('.less').hide();
         let sectionArchitecture = $("#architecture");
         let sectionArchitectureElemDistanceTop = parseInt(sectionArchitecture.offset().top);
-      } else {
+      } else if ($(window).outerWidth() <= 910){
         $('.architecturePics li').hide();
         $('.architecturePics li:lt(4)').show();
         let heightOfSection = $("#architecture").css("height");
@@ -603,8 +608,13 @@ $(function() {
     })
     $('.architecturePics li:lt(4)').show();
     $('.less').hide();
-    let items2 = 27;
+    let items2 = 30;
+    if ($(window).outerWidth() <= 910) {
     let shown2 = 4;
+  }
+  else{
+    let shown2 = 9;
+  }
     $('.more').click(function() {
       $('.less').attr('style', 'display:inline-block');
       shown2 = $('.architecturePics li:visible').length + 6;
@@ -615,9 +625,9 @@ $(function() {
           let heightOfSection = $("#architecture").css("height");
           heightOfSection = parseInt(heightOfSection) + 1350
           $("#architecture").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
-        } else if ($(window).outerWidth() < 910) {
+        } else if ($(window).outerWidth() <= 910) {
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 650
+          heightOfSection = parseInt(heightOfSection) + 660
           $("#architecture").css("height", heightOfSection + "px", "important")
         } else {
           let heightOfSection = $("#architecture").css("height");
@@ -627,19 +637,20 @@ $(function() {
       } else {
         $('.architecturePics li:lt(' + items2 + ')').show(300);
         if ($(window).outerWidth()<501){
+          $('.more').hide();
            let heightOfSection = $("#architecture").css("height");
-           heightOfSection= parseInt(heightOfSection)+1050
+           heightOfSection= parseInt(heightOfSection)+350
            $("#architecture").attr("style", `height: ${heightOfSection}`+'px'+' !important')
          }
-        else if ($(window).outerWidth() < 910) {
+        else if ($(window).outerWidth() <= 910) {
           $('.more').hide();
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 650
+          heightOfSection = parseInt(heightOfSection) + 280
           $("#architecture").css("height", heightOfSection + "px", "important")
         } else {
           $('.more').hide();
           let heightOfSection = $("#architecture").css("height");
-          heightOfSection = parseInt(heightOfSection) + 450
+          heightOfSection = parseInt(heightOfSection) + 250
           $("#architecture").css("height", heightOfSection + "px", "important")
         }
       }
@@ -658,7 +669,7 @@ $(function() {
            scrollTop: sectionArchitectureElemDistanceTop
          }, 500);
        }
-      if ($(window).outerWidth() < 910) {
+      if ($(window).outerWidth() <= 910) {
         $('.architecturePics li').not(':lt(4)').hide(10);
         let heightOfSection = $("#architecture").css("height");
         heightOfSection = "700px";
