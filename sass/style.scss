@@ -96,7 +96,7 @@ body {
     backface-visibility: hidden;
     width: 100%;
     display: none;
-    flex-wrap: nowrap;
+    flex-wrap: nowrap !important;
     background-color: white;
     justify-content: space-around;
     height: 60px;
@@ -655,7 +655,7 @@ footer{
       backface-visibility: hidden;
       width: 100%;
       display: none;
-      flex-wrap: nowrap;
+      flex-wrap: nowrap !important;
       background-color: white;
       justify-content: space-around;
       height: 50px;
@@ -737,7 +737,7 @@ footer{
     }
   }
 }
-@media only screen and (max-width:679px) {
+@media only screen and (max-width:694px) {
   #header {
     width: 100%;
     .menu {
@@ -748,7 +748,7 @@ footer{
       backface-visibility: hidden;
       width: 100%;
       display: none;
-      flex-wrap: nowrap;
+      flex-wrap: nowrap !important;
       background-color: white;
       justify-content: space-around;
       height: 40px;
