@@ -8,7 +8,56 @@ body {
   background-color: white;
   font-family: 'Poiret One', cursive;
 }
-
+.loader{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0px;
+  left:0px;
+  background-color: white;
+  z-index: 1000;
+  .circle{
+    position: relative;
+    margin: 0 auto;
+    margin-top:200px;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    border-top: 3px solid #4a3821;
+    animation: spin 4s infinite;
+    .innerCircle{
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      top: 25%;
+      left: 25%;
+      transform: translate(-50%,-50%);
+      border-radius: 50%;
+      border-top: 3px solid #c19e7e;
+      animation: spin2 2s infinite;
+    }
+  }
+  @keyframes spin {
+    0%{
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+    100%{
+        transform: rotate(360deg);
+        animation-timing-function: linear;
+    }
+  }
+  @keyframes spin2 {
+    0%{
+      transform: rotate(0deg);
+      animation-timing-function: linear;
+    }
+    100%{
+        transform: rotate(-360deg);
+        animation-timing-function: linear;
+    }
+  }
+}
 .container {
   margin: 0 auto;
   min-height: 1px;

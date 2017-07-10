@@ -7,6 +7,10 @@ require("../sass/style.scss")
 $(function() {
   if (!/Mobi/.test(navigator.userAgent)) {
 
+    setTimeout(()=>{
+      $(".loader").fadeOut('slow');
+    },5000)
+
   $(".fa-bars").on("click",function(){
     $(this).toggleClass('fa-bars');
     $(this).toggleClass('fa-times');
@@ -389,6 +393,9 @@ else{
     $(".parallax3").css("background-attachment","scroll" ,"important")
     $(".parallax4").css("background-attachment","scroll" ,"important")
   }
+  setTimeout(()=>{
+    $(".loader").fadeOut('slow');
+  },5000)
   //Loading burger and menu border
   $(".fa-bars").on("click",function(){
     $(this).toggleClass('fa-bars');
