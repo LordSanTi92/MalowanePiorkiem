@@ -26,7 +26,6 @@ $(function() {
       let scrollTop = $(document).scrollTop();
       if (scrollTop > scrollingStartDistance) {
         $(".menu").slideDown(1);
-        $(".menu").css("display", "flex");
       }
 
       //Border bottom for anchor About Me
