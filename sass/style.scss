@@ -1973,6 +1973,8 @@ footer {
       left: 15%;
       transform: scale(1);
       transition: all 200ms ease-in;
+      width: 50px;
+      height: 50px;
       -webkit-transition: all 200ms ease-in;
       -webkit-transform: scale(1);
       -ms-transition: all 200ms ease-in;
@@ -1994,7 +1996,7 @@ footer {
 
     .less {
       bottom: 48px;
-      left: 25%;
+      left: 35%;
       transform: scale(1);
       transition: all 200ms ease-in;
       -webkit-transition: all 200ms ease-in;

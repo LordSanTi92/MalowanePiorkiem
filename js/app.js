@@ -200,7 +200,7 @@ $(function() {
     })
     $('.architecturePics li:lt(4)').show();
     $('.less').hide();
-    let items2 = 30;
+    let items2 = 36;
     if ($(window).outerWidth() <= 910) {
     let shown2 = 4;
   }
@@ -607,7 +607,7 @@ $(function() {
     })
     $('.architecturePics li:lt(4)').show();
     $('.less').hide();
-    let items2 = 30;
+    let items2 = 36;
     if ($(window).outerWidth() <= 910) {
     let shown2 = 4;
   }
