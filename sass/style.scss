@@ -78,9 +78,10 @@ body {
 }
 
 .parallax {
+  position: relative;
   margin: 0 auto;
   background-attachment: fixed;
-  background-image: url('../images/banner_big.jpg');
+  background-image: url('../images/baner_1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -91,13 +92,41 @@ body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
+
+  .title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 3px solid #c19e7e;
+    background-color: #fff;
+    width: 50%;
+    height: 300px;
+
+    p {
+      display: block;
+      margin-top: 30px;
+      width: 100%;
+      text-align: center;
+      color: #000;
+      font-size: 4vw;
+      font-weight: 700;
+    }
+
+    span {
+      display: block;
+      margin: 20px auto;
+      border-top: 2px solid #c19e7e;
+      width: 50%;
+    }
+  }
 }
 
 #header {
   width: 100%;
 
   .menu {
-    display: flex;
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -161,6 +190,7 @@ body {
     .img {
       position: relative;
       opacity: 0;
+      margin-left: 10px;
       border-radius: 50%;
       box-shadow: 0 6px 7px grey;
       background-image: url('../images/portret.jpg');
@@ -670,7 +700,7 @@ footer {
     width: 100%;
 
     .menu {
-      display: flex;
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -776,7 +806,7 @@ footer {
     width: 100%;
 
     .menu {
-      display: flex;
+      display: none;
       position: fixed;
       top: 0;
       left: 0;
@@ -1273,6 +1303,51 @@ footer {
 }
 
 @media only screen and (max-width: 910px) {
+  .parallax {
+    position: relative;
+    margin: 0 auto;
+    background-attachment: fixed;
+    background-image: url('../images/baner_1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    max-width: 1920px;
+    height: 100vh;
+    overflow: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #c19e7e;
+      background-color: #fff;
+      width: 50%;
+      height: 300px;
+
+      p {
+        display: block;
+        margin-top: 50px;
+        width: 100%;
+        text-align: center;
+        color: #000;
+        font-size: 4vw;
+        font-weight: 700;
+      }
+
+      span {
+        display: block;
+        margin: 40px auto;
+        border-top: 2px solid #c19e7e;
+        width: 50%;
+      }
+    }
+  }
+
   #architecture {
     height: 700px;
 
@@ -1566,7 +1641,7 @@ footer {
     .parallax {
       margin: 0 auto;
       background-attachment: fixed;
-      background-image: url('../images/banner_small.jpg');
+      background-image: url('../images/baner_1.jpg');
       background-repeat: no-repeat;
       background-position: center;
       background-size: cover;
@@ -1576,6 +1651,34 @@ footer {
       -webkit-background-size: cover;
       -moz-background-size: cover;
       -o-background-size: cover;
+
+      .title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 3px solid #c19e7e;
+        background-color: #fff;
+        width: 50%;
+        height: 300px;
+
+        p {
+          display: block;
+          margin-top: 50px;
+          width: 100%;
+          text-align: center;
+          color: #000;
+          font-size: 4.5vw;
+          font-weight: 700;
+        }
+
+        span {
+          display: block;
+          margin: 40px auto;
+          border-top: 2px solid #c19e7e;
+          width: 50%;
+        }
+      }
     }
 
     .parallax2 {
@@ -1615,17 +1718,45 @@ footer {
 @media only screen and (max-width: 500px ){
   .parallax {
     margin: 0 auto;
-    background-attachment: fixed;
-    background-image: url('../images/banner_big.jpg');
+    background-attachment: scroll;
+    background-image: url('../images/baner_2.jpg');
     background-repeat: no-repeat;
     background-position: top;
-    background-size: contain;
+    background-size: cover;
     padding: 0;
     width: 100%;
-    height: 300px;
-    -webkit-background-size: contain;
-    -moz-background-size: contain;
-    -o-background-size: contain;
+    height: 50vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+
+    .title {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      border: 3px solid #c19e7e;
+      background-color: #fff;
+      width: 50%;
+      height: 35%;
+
+      p {
+        display: block;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+        color: #000;
+        font-size: 4vw;
+        font-weight: 700;
+      }
+
+      span {
+        display: block;
+        margin: 30px auto;
+        border-top: 2px solid #c19e7e;
+        width: 50%;
+      }
+    }
   }
 
   #about {
@@ -1665,8 +1796,7 @@ footer {
       }
 
       .in-view {
-        animation: pokaz 3s forwards;
-        animation-play-state: paused;
+        animation: none;
         z-index: 1;
       }
 
@@ -2092,7 +2222,7 @@ footer {
           -ms-transition: all 200ms ease-in;
           -ms-transform: scale(1.2);
           -moz-transition: all 200ms ease-in;
-          -moz-transform: scale(1.2);          
+          -moz-transform: scale(1.2);
         }
       }
     }
