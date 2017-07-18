@@ -505,9 +505,7 @@ $(function() {
       $(".parallax2").css("background-attachment", "scroll", "important")
       $(".parallax3").css("background-attachment", "scroll", "important")
       $(".parallax4").css("background-attachment", "scroll", "important")
-      $(".parallax2").css("background-size", "contain", "important")
-      $(".parallax3").css("background-size", "contain", "important")
-      $(".parallax4").css("background-size", "contain", "important")
+
     }
     setTimeout(() => {
       $(".loader").fadeOut('slow');
