@@ -342,42 +342,127 @@ $(function() {
       })
     })
 
-    $('.landscapePics li:lt(9)').show();
-    $('.landscapePics').find('.less').hide();
-    var items = 27;
-    var shown = 9;
-    $('.landscapePics').find('.more').click(function() {
-      $('.landscapePics').find('.less').show();
-      shown = $('.landscapePics li:visible').length + 9;
+    $(window).on("load resize", function() {
+      if ($(window).outerWidth() > 910) {
+        $('.landscapePics li').hide();
+        $('.landscapePics li:lt(9)').show();
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "900px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+      } else if ($(window).outerWidth() <= 910){
+        $('.landscapePics li').hide();
+        $('.landscapePics li:lt(4)').show();
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "700px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+      }
+    })
+    $('.landscapePics li:lt(4)').show();
+    $('.less2').hide();
+    let items = 11;
+    if ($(window).outerWidth() <= 910) {
+    let shown = 4;
+    }
+    else{
+    let shown = 9;
+    }
+    $('.more2').click(function() {
+      $('.less2').attr("style", "display:inline-block");
+      shown = $('.landscapePics li:visible').length + 6;
+      console.log(shown);
       if (shown < items) {
         $('.landscapePics li:lt(' + shown + ')').show(300);
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 700
-        $("#landscape").css("height", heightOfSection + "px")
-      } else if (shown = items) {
-        $('.landscapePics li:lt(' + shown + ')').show(300);
-        $('.landscapePics').find('.more').hide();
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 700
-        $("#landscape").css("height", heightOfSection + "px")
+        if ($(window).outerWidth() < 501) {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 1350
+          $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        } else if ($(window).outerWidth() <= 910) {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 660
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        } else {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 450
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        }
+
       } else {
         $('.landscapePics li:lt(' + items + ')').show(300);
-        $('.landscapePics').find('.more').hide();
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 300
-        $("#landscape").css("height", heightOfSection + "px")
+        if ($(window).outerWidth() < 501) {
+          $('.more2').hide();
+          $('.less2').attr("style", `left: 13%` + ' !important');
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 350
+          $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        } else if ($(window).outerWidth() <= 910) {
+          $('.more2').hide();
+          $('.less2').attr("style", `left: 13%` + ' !important');
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 280
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        } else {
+          $('.more2').hide();
+          $('.less2').attr("style", `left: 13%` + ' !important');
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 250
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        }
+        console.log($('.less2').attr("left"));
       }
     });
-    $('.landscapePics').find('.less').click(function() {
-      $('.architecturePics li').not(':lt(9)').hide(10);
-      let heightOfSection = $("#architecture").css("height");
-      heightOfSection = "900px";
-      $("#architecture").css("height", heightOfSection)
-      $('.landscapePics').find('.more').show();
-      $('.landscapePics').find('.less').hide();
-    }//Mobile Tablet version of JS
+    $('.less2').click(function() {
 
-    );
+      if ($(window).outerWidth() < 501) {
+        $('.landscapePics li').not(':lt(4)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "1100px";
+        $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      } else if ($(window).outerWidth() <= 910) {
+        $('.landscapePics li').not(':lt(4)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "700px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      } else {
+        $('.landscapePics li').not(':lt(9)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "900px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      }
+    });
+
 
   } else {
     const isMobile = {
@@ -737,41 +822,124 @@ $(function() {
       })
     })
 
-    $('.landscapePics li:lt(9)').show();
-    $('.landscapePics').find('.less').hide();
-    var items = 27;
-    var shown = 9;
-    $('.landscapePics').find('.more').click(function() {
-      $('.landscapePics').find('.less').show();
-      shown = $('.landscapePics li:visible').length + 9;
+    $(window).on("load resize", function() {
+      if ($(window).outerWidth() > 910) {
+        $('.landscapePics li').hide();
+        $('.landscapePics li:lt(9)').show();
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "900px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+      } else if ($(window).outerWidth() <= 910){
+        $('.landscapePics li').hide();
+        $('.landscapePics li:lt(4)').show();
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "700px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+      }
+    })
+    $('.landscapePics li:lt(4)').show();
+    $('.less2').hide();
+    let items = 11;
+    if ($(window).outerWidth() <= 910) {
+    let shown = 4;
+    }
+    else{
+    let shown = 9;
+    }
+    $('.more2').click(function() {
+      $('.less2').attr("style", "display:inline-block");
+      shown = $('.landscapePics li:visible').length + 6;
+      console.log(shown);
       if (shown < items) {
         $('.landscapePics li:lt(' + shown + ')').show(300);
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 700
-        $("#landscape").css("height", heightOfSection + "px", "important")
-      } else if (shown = items) {
-        $('.landscapePics li:lt(' + shown + ')').show(300);
-        $('.landscapePics').find('.more').hide();
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 700
-        $("#landscape").css("height", heightOfSection + "px", "important")
+        if ($(window).outerWidth() < 501) {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 1350
+          $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        } else if ($(window).outerWidth() <= 910) {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 660
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        } else {
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 450
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        }
+
       } else {
         $('.landscapePics li:lt(' + items + ')').show(300);
-        $('.landscapePics').find('.more').hide();
-        let heightOfSection = $("#landscape").css("height");
-        heightOfSection = parseInt(heightOfSection) + 300
-        $("#landscape").css("height", heightOfSection + "px", "important")
+        if ($(window).outerWidth() < 501) {
+          $('.more2').hide();
+          $('.less2').attr("left","13%");
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 350
+          $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        } else if ($(window).outerWidth() <= 910) {
+          $('.more2').hide();
+          $('.less2').attr("left","13%");
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 280
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        } else {
+          $('.more2').hide();
+          let heightOfSection = $("#landscape").css("height");
+          heightOfSection = parseInt(heightOfSection) + 250
+          $("#landscape").css("height", heightOfSection + "px", "important")
+        }
       }
     });
-    $('.landscapePics').find('.less').click(function() {
-      $('.architecturePics li').not(':lt(9)').hide(10);
-      let heightOfSection = $("#architecture").css("height");
-      heightOfSection = "900px";
-      $("#architecture").css("height", heightOfSection)
-      $('.landscapePics').find('.more').show();
-      $('.landscapePics').find('.less').hide();
-    });
+    $('.less2').click(function() {
 
-  }
-
+      if ($(window).outerWidth() < 501) {
+        $('.landscapePics li').not(':lt(4)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "1100px";
+        $("#landscape").attr("style", `height: ${heightOfSection}` + 'px' + ' !important')
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      } else if ($(window).outerWidth() <= 910) {
+        $('.landscapePics li').not(':lt(4)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "700px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      } else {
+        $('.landscapePics li').not(':lt(9)').hide(10);
+        let heightOfSection = $("#landscape").css("height");
+        heightOfSection = "900px";
+        $("#landscape").css("height", heightOfSection)
+        $('.more2').show();
+        $('.more2').attr('style', 'display:inline-block');
+        $('.less2').hide();
+        let sectionLandscape = $("#landscape");
+        let sectionLandscapeElemDistanceTop = parseInt(sectionLandscape.offset().top);
+        $('html, body').animate({
+          scrollTop: sectionLandscapeElemDistanceTop
+        }, 500);
+      }
+    })
+}
 })

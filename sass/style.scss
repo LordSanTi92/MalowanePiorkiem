@@ -158,7 +158,7 @@ body {
     li {
       display: inline-block !important;
       margin: 0 3rem;
-      padding: 14px 15px 14px 0;
+      padding: 14px 15px;
       font-size: 23px;
       font-weight: 100;
 
@@ -449,6 +449,7 @@ body {
 }
 
 #landscape {
+  position: relative;
   height: 850px;
 
   .landscapePics {
@@ -562,32 +563,62 @@ body {
     }
   }
 
-  .less,
-  .more {
+  .less2,
+  .more2 {
+    position: absolute;
     cursor: pointer;
-    width: 50px;
-    text-align: center;
     color: #c19e7e;
-    font-size: 70px;
+    font-size: 145px;
   }
 
-  .less:after,
-  .more:after {
-    display: block;
-    clear: both;
-    content: '';
+  .more2 {
+    bottom: 20px;
+    left: 15%;
+    transform: scale(1);
+    transition: all 200ms ease-in;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
 
+    &:hover {
+      transform: scale(1.2);
+      transition: all 200ms ease-in;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1.2);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1.2);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1.2);
+    }
   }
 
-  .more {
-    float: left;
-    margin-left: 165px;
-  }
+  .less2 {
+    bottom: 110px;
+    left: 80%;
+    transform: scale(1);
+    transition: all 200ms ease-in;
+    width: 100px;
+    height: 60px;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1);
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1);
 
-  .less {
-    float: right;
-    transform: rotate(180deg);
-    margin-right: 165px;
+    &:hover {
+      transform: scale(1.2);
+      transition: all 200ms ease-in;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1.2);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1.2);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1.2);
+    }
   }
 }
 
@@ -732,7 +763,7 @@ footer {
       li {
         display: inline-block !important;
         margin: 0 0.5rem;
-        padding: 13px 15px 8px 0;
+        padding: 13px 15px 8px 15px;
         font-size: 19px;
         font-weight: 100;
 
@@ -1299,6 +1330,61 @@ footer {
         }
       }
     }
+    .less2,
+    .more2 {
+      position: relative;
+      cursor: pointer;
+      color: #c19e7e;
+      font-size: 145px;
+    }
+
+    .more2 {
+      bottom: 48px;
+      left: 15%;
+      transform: scale(1);
+      transition: all 200ms ease-in;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.2);
+      }
+    }
+
+    .less2 {
+      bottom: 48px;
+      left: 55%;
+      transform: scale(1);
+      transition: all 200ms ease-in;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
+
+      &:hover {
+        transform: scale(1.2);
+        transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1.2);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1.2);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1.2);
+      }
+    }
   }
 }
 
@@ -1634,6 +1720,63 @@ footer {
           -moz-transform: none;
         }
       }
+      .less2,
+      .more2 {
+        position: absolute;
+        cursor: pointer;
+        color: #c19e7e;
+        font-size: 145px;
+      }
+
+      .more2 {
+        bottom: 20px;
+        left: 15%;
+        transform: scale(1);
+        transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+
+        &:hover {
+          transform: scale(1.2);
+          transition: all 200ms ease-in;
+          -webkit-transition: all 200ms ease-in;
+          -webkit-transform: scale(1.2);
+          -ms-transition: all 200ms ease-in;
+          -ms-transform: scale(1.2);
+          -moz-transition: all 200ms ease-in;
+          -moz-transform: scale(1.2);
+        }
+      }
+
+      .less2 {
+        bottom: 110px;
+        left: 60%;
+        transform: scale(1);
+        transition: all 200ms ease-in;
+        width: 100px;
+        height: 60px;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+
+        &:hover {
+          transform: scale(1.2);
+          transition: all 200ms ease-in;
+          -webkit-transition: all 200ms ease-in;
+          -webkit-transform: scale(1.2);
+          -ms-transition: all 200ms ease-in;
+          -ms-transform: scale(1.2);
+          -moz-transition: all 200ms ease-in;
+          -moz-transform: scale(1.2);
+        }
+      }
     }
   }
 
@@ -1742,7 +1885,7 @@ footer {
 
       p {
         display: block;
-        margin-top: 20px;
+        margin-top: 15px;
         width: 100%;
         text-align: center;
         color: #000;
@@ -1752,7 +1895,7 @@ footer {
 
       span {
         display: block;
-        margin: 30px auto;
+        margin: 15px auto;
         border-top: 2px solid #c19e7e;
         width: 50%;
       }
@@ -2036,7 +2179,7 @@ footer {
   }
 
   #landscape {
-    height: 2200px;
+    height: 1100px !important;
 
     .landscapePics {
       padding-left: 30px;
@@ -2149,32 +2292,62 @@ footer {
       }
     }
 
-    .less,
-    .more {
+    .less2,
+    .more2 {
+      position: relative;
       cursor: pointer;
-      width: 50px;
-      text-align: center;
       color: #c19e7e;
-      font-size: 70px;
+      font-size: 145px;
     }
 
-    .less:after,
-    .more:after {
-      display: block;
-      clear: both;
-      content: '';
+    .more2 {
+      bottom: 48px;
+      left: 15%;
+      transform: scale(1);
+      transition: all 200ms ease-in;
+      width: 50px;
+      height: 50px;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
 
+      &:hover {
+        transform: scale(1);
+        transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+      }
     }
 
-    .more {
-      float: left;
-      margin-left: 165px;
-    }
+    .less2 {
+      bottom: 48px;
+      left: 35%;
+      transform: scale(1);
+      transition: all 200ms ease-in;
+      -webkit-transition: all 200ms ease-in;
+      -webkit-transform: scale(1);
+      -ms-transition: all 200ms ease-in;
+      -ms-transform: scale(1);
+      -moz-transition: all 200ms ease-in;
+      -moz-transform: scale(1);
 
-    .less {
-      float: right;
-      transform: rotate(180deg);
-      margin-right: 165px;
+      &:hover {
+        transform: scale(1);
+        transition: all 200ms ease-in;
+        -webkit-transition: all 200ms ease-in;
+        -webkit-transform: scale(1);
+        -ms-transition: all 200ms ease-in;
+        -ms-transform: scale(1);
+        -moz-transition: all 200ms ease-in;
+        -moz-transform: scale(1);
+      }
     }
   }
 
