@@ -1,5 +1,3 @@
-require("../sass/style.scss")
-
 $(function() {
   if (!/Mobi/.test(navigator.userAgent)) {
 
