@@ -173,6 +173,7 @@ $(function() {
     })
 
     // Loading Images at Architecture section
+    let shown2;
     $(window).on("load resize", function() {
       if ($(window).outerWidth() > 910) {
         $('.architecturePics li').hide();
@@ -339,7 +340,7 @@ $(function() {
         })
       })
     })
-
+    let shown;
     $(window).on("load resize", function() {
       if ($(window).outerWidth() > 910) {
         $('.landscapePics li').hide();
@@ -665,6 +666,7 @@ $(function() {
       })
     })
     //Loading images for Architecture
+    let shown2;
     $(window).on("load resize", function() {
       if ($(window).outerWidth() > 910) {
         $('.architecturePics li').hide();
@@ -777,7 +779,7 @@ $(function() {
         }, 500);
       }
     });
-
+    let shown;
     let visibleImgLandscape = $(".landscapePics").find("img");
     $.each(visibleImgLandscape, function() {
       $(this).on("click", event => {
