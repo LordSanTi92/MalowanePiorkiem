@@ -45,9 +45,11 @@ $(function() {
     }
 
     //TIMEOUT FOR LOADING SCREEN
-    setTimeout(() => {
+    window.addEventListener('load',()=>{
       $(".loader").fadeOut('slow');
-    }, 5000)
+    })
+    
+
 
     //OPENING MENU ON BURGER AND CHANGING ICON OF BURGER TO CROSS AND CROSS TO BURGER VIA TOGGLE
     $(".fa-bars").on("click", function() {

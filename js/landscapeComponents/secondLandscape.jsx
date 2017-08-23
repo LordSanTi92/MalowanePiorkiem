@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 
-let secondPartImages = ['./images/image43.jpg','./images/image44.jpg','./images/image45.jpg','./images/image46.jpg','./images/image47.jpg']
+let secondPartImages = ['./images/image43.jpg','./images/image44.jpg','./images/image45.jpg','./images/image46.jpg','./images/image47.jpg','./images/image48.jpg']
 
 class SecondComponentLandscape extends React.Component{
 

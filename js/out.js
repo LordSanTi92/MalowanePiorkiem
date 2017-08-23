@@ -9853,9 +9853,9 @@ $(function () {
   }
 
   //TIMEOUT FOR LOADING SCREEN
-  setTimeout(function () {
+  window.addEventListener('load', function () {
     $(".loader").fadeOut('slow');
-  }, 5000);
+  });
 
   //OPENING MENU ON BURGER AND CHANGING ICON OF BURGER TO CROSS AND CROSS TO BURGER VIA TOGGLE
   $(".fa-bars").on("click", function () {
@@ -24259,6 +24259,10 @@ var _secondLandscape = __webpack_require__(206);
 
 var _secondLandscape2 = _interopRequireDefault(_secondLandscape);
 
+var _thirdLandscape = __webpack_require__(207);
+
+var _thirdLandscape2 = _interopRequireDefault(_thirdLandscape);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -24267,7 +24271,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var tableOfComponents = [_react2.default.createElement(_firstLandscape2.default, null), _react2.default.createElement(_secondLandscape2.default, null)];
+var tableOfComponents = [_react2.default.createElement(_firstLandscape2.default, null), _react2.default.createElement(_secondLandscape2.default, null), _react2.default.createElement(_thirdLandscape2.default, null)];
 
 var ContainerLandscape = function (_React$Component) {
   _inherits(ContainerLandscape, _React$Component);
@@ -24544,7 +24548,7 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
-var secondPartImages = ['./images/image43.jpg', './images/image44.jpg', './images/image45.jpg', './images/image46.jpg', './images/image47.jpg'];
+var secondPartImages = ['./images/image43.jpg', './images/image44.jpg', './images/image45.jpg', './images/image46.jpg', './images/image47.jpg', './images/image48.jpg'];
 
 var SecondComponentLandscape = function (_React$Component) {
   _inherits(SecondComponentLandscape, _React$Component);
@@ -24656,6 +24660,148 @@ var SecondComponentLandscape = function (_React$Component) {
 }(_react2.default.Component);
 
 exports.default = SecondComponentLandscape;
+
+/***/ }),
+/* 207 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(9);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactDom = __webpack_require__(11);
+
+var _reactDom2 = _interopRequireDefault(_reactDom);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var thirdPartImages = ['./images/image49.jpg', './images/image50.jpg', './images/image51.jpg', './images/image52.jpg'];
+
+var ThirdComponentLandscape = function (_React$Component) {
+  _inherits(ThirdComponentLandscape, _React$Component);
+
+  function ThirdComponentLandscape() {
+    var _ref;
+
+    var _temp, _this, _ret;
+
+    _classCallCheck(this, ThirdComponentLandscape);
+
+    for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    return _ret = (_temp = (_this = _possibleConstructorReturn(this, (_ref = ThirdComponentLandscape.__proto__ || Object.getPrototypeOf(ThirdComponentLandscape)).call.apply(_ref, [this].concat(args))), _this), _this.handleClickBigImage = function (event) {
+      var dataId = $(event.target).attr('data-id');
+      var imageURL = $(event.target).css('background-image');
+      var bigDiv = $("<div class='bigImagePopUp'></div>");
+      var prevDiv = $("<div class='prevButton'></div>");
+      var prevButton = $("<p>&lt;</p>");
+      var nextDiv = $("<div class='nextButton'></div>");
+      var nextButton = $("<p class='next'>&gt;</p>");
+      var cross = $("<p class='cross fa fa-times'></p>");
+      var bigImage = $('<div class=\'bigImage\' style=background-image:' + imageURL + '></div>');
+      var bigImageSection = $('<div class="bigImageSection"></div>');
+      prevDiv.append(prevButton);
+      nextDiv.append(cross);
+      nextDiv.append(nextButton);
+      bigDiv.append(prevDiv);
+      bigDiv.append(bigImage);
+      bigDiv.append(nextDiv);
+      bigImageSection.append(bigDiv);
+      $('body').prepend(bigImageSection);
+      cross.on('click', function () {
+        bigImageSection.remove();
+      });
+      nextButton.on('click', function () {
+        dataId++;
+        if (dataId < thirdPartImages.length) {
+          bigImage.remove();
+          bigDiv.append(bigImage);
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+        } else {
+          dataId = 0;
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+          bigImage.remove();
+          bigDiv.append(bigImage);
+        }
+      });
+      bigDiv.swipeleft(function () {
+        dataId++;
+        if (dataId < thirdPartImages.length) {
+          bigImage.remove();
+          bigDiv.append(bigImage);
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+        } else {
+          dataId = 0;
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+          bigImage.remove();
+          bigDiv.append(bigImage);
+        }
+      });
+      prevButton.on('click', function () {
+        dataId--;
+        if (dataId > -1) {
+          bigImage.remove();
+          bigDiv.append(bigImage);
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+        } else {
+          dataId = thirdPartImages.length - 1;
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+          bigImage.remove();
+          bigDiv.append(bigImage);
+        }
+      });
+      bigDiv.swiperight(function () {
+        dataId--;
+        if (dataId > -1) {
+          bigImage.remove();
+          bigDiv.append(bigImage);
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+        } else {
+          dataId = thirdPartImages.length - 1;
+          bigImage.css('background-image', 'url(' + thirdPartImages[dataId]);
+          bigImage.remove();
+          bigDiv.append(bigImage);
+        }
+      });
+    }, _temp), _possibleConstructorReturn(_this, _ret);
+  }
+
+  _createClass(ThirdComponentLandscape, [{
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        'div',
+        { className: 'content' },
+        thirdPartImages.map(function (url, index) {
+          return _react2.default.createElement('div', { onClick: _this2.handleClickBigImage, 'data-id': index, key: index, style: { backgroundImage: 'url(' + url + ')' }, className: 'image' });
+        })
+      );
+    }
+  }]);
+
+  return ThirdComponentLandscape;
+}(_react2.default.Component);
+
+exports.default = ThirdComponentLandscape;
 
 /***/ })
 /******/ ]);

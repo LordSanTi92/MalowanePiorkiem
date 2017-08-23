@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import FirstComponentLandscape from './firstLandscape.jsx'
-import SecondComponentLandscape from './secondLandscape.jsx'
+import FirstComponentLandscape from './firstLandscape.jsx';
+import SecondComponentLandscape from './secondLandscape.jsx';
+import ThirdComponentLandscape from './thirdLandscape.jsx'
 
-
-let tableOfComponents = [<FirstComponentLandscape/>,<SecondComponentLandscape/>]
+let tableOfComponents = [<FirstComponentLandscape/>,<SecondComponentLandscape/>,<ThirdComponentLandscape/>]
 
 class ContainerLandscape extends React.Component{
   constructor(props){
