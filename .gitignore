@@ -1,6 +1,7 @@
 # Logs
 logs
 *.log
+
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
@@ -35,6 +36,10 @@ build/Release
 # Dependency directories
 node_modules/
 jspm_packages/
+webpack.config.js
+package.json
+gulpfile.js
+
 
 # Typescript v1 declaration files
 typings/
@@ -56,4 +61,3 @@ typings/
 
 # dotenv environment variables file
 .env
-
